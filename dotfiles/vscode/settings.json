@@ -1,4 +1,8 @@
 {
+    ////////////////////////////////
+    //////////   VSCODE   //////////
+    ////////////////////////////////
+
     // TODO: depends on the screen
     "window.zoomLevel": 0,
 
@@ -26,4 +30,61 @@
     "git.enableSmartCommit": false,
 
     "javascript.updateImportsOnFileMove.enabled": "always",
+
+
+    ////////////////////////////////
+    ////////// EXTENSIONS //////////
+    ////////////////////////////////
+
+    "python.pythonPath": "...", // TODO: add this somehow, and have it differ between platforms
+    "python.linting.pylintArgs": [
+        // disable docstring missing messages
+        "--disable=C0111",
+
+        // NOTE: see pylint's docs about C0103
+
+        // allow global non-const variables
+        // this is --const-rgx=const-rgx|variable-rgx with the 30 char limit removed
+        "--const-rgx=(([A-Z_][A-Z0-9_]*)|(__.*__))$|[a-z_][a-z0-9_]{2,}$",
+
+        // allow non-global consts
+        // this is --variable-rgx=const-rgx|variable-rgx with the 30 char limit removed
+        "--variable-rgx=(([A-Z_][A-Z0-9_]*)|(__.*__))$|[a-z_][a-z0-9_]{2,}$",
+
+        // remove the 30 char limit from the other types
+        // this is the default function-rgx/method-rgx/argument-rgx/attribute-rgx with the 30 char limit removed
+        "--function-rgx=[a-z_][a-z0-9_]{2,}$",
+        "--method-rgx=[a-z_][a-z0-9_]{2,}$",
+        "--argument-rgx=[a-z_][a-z0-9_]{2,}$",
+        "--attribute-rgx=[a-z_][a-z0-9_]{2,}$",
+
+        "--include-naming-hint=y",
+
+        // default is 100 but 120 fits the screen size
+        "--max-line-length=120"
+    ],
+
+    "gitlens.keymap": "alternate",
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true,
+    },
+
+    "vim.easymotion": true,
+    "vim.hlsearch": true,
+    "vim.normalModeKeyBindings": [
+        { "before": [";"], "after": [":"] },
+    ],
+
+    "java.autobuild.enabled": false,
+    "java.configuration.checkProjectSettingsExclusions": false,
+
+    "rust.rustup": {
+        // TODO: should differ between platforms
+        "toolchain": "stable-x86_64-pc-windows-msvc",
+        "nightlyToolchain": "nightly-x86_64-pc-windows-msvc"
+    },
+    "rust.mode": "rls",
+    "rust.rls": {
+        "useRustfmt": true,
+    },
 }
