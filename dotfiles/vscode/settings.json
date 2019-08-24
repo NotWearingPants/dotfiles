@@ -64,10 +64,32 @@
         "--max-line-length=120"
     ],
 
-    "gitlens.keymap": "alternate",
+    "gitlens.keymap": "none",
     "gitlens.advanced.messages": {
         "suppressShowKeyBindingsNotice": true,
+        "suppressResultsExplorerNotice": true,
     },
+
+    "cSpell.userWords": [
+        // TODO: add extra dictionary words
+    ],
+
+    "todohighlight.keywords": [
+        {
+            "text": "TODO:",
+            "backgroundColor": "rgba(0, 255, 0, 0.1)",
+            "color": "",
+            "overviewRulerColor": "orange",
+        },
+        {
+            "text": "NOTE:",
+            "backgroundColor": "rgba(100, 50, 150, 0.5)",
+            "color": "",
+            "overviewRulerColor": "rebeccapurple",
+        },
+    ],
+
+    "eslint.enable": false,
 
     "vim.easymotion": true,
     "vim.hlsearch": true,
@@ -87,4 +109,6 @@
     "rust.rls": {
         "useRustfmt": true,
     },
+
+    "graphvizPreview.dotPath": "...", // TODO: add this somehow, and have it differ between platforms
 }
