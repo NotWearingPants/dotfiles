@@ -1,3 +1,21 @@
 {
+    // TODO: depends on the screen
+    "window.zoomLevel": 0,
 
+    "window.restoreWindows": "all",
+    "window.doubleClickIconToClose": true,
+
+    "workbench.startupEditor": "none",
+
+    "editor.fontSize": 14,
+    "editor.dragAndDrop": false,
+
+    "terminal.integrated.shell.windows": "C:\\WINDOWS\\Sysnative\\cmd.exe",
+    "terminal.integrated.rendererType": "canvas",
+    "terminal.integrated.scrollback": 9999,
+
+    "git.autofetch": true,
+    // this is the "always" button when committing without any staged stuff
+    // i want to disable the "always" button and only leave "yes" and "cancel", but it doesn't seem to affect anything
+    "git.enableSmartCommit": false,
 }
