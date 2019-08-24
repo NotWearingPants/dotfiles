@@ -22,6 +22,10 @@
     "terminal.integrated.rendererType": "canvas",
     "terminal.integrated.scrollback": 9999,
 
+    // this is the "do not ask me again" checkbox when dragging and dropping to move files in the explorer on the left
+    // i want to disable the checkbox and only leave "move" and "cancel", but it doesn't seem to affect anything
+    "explorer.confirmDragAndDrop": true,
+
     "debug.toolBarLocation": "docked",
 
     "git.autofetch": true,
