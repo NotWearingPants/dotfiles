@@ -1,0 +1,58 @@
+{
+	"env": {
+		"exe_args": " ",
+		"vs_directory": "C:\\Program Files (x86)\\Microsoft Visual Studio 12.0",
+		"build_platform": "x64",
+		"compiler_options": "/Zi /W4 /WX /wd4100 /MTd /EHsc /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /D _CRT_SECURE_NO_WARNINGS",
+
+		"no_exe_warning": "Binary does not exist, build first using F7",
+		"old_exe_warning": "Source is newer than binary, rebuild using F7",
+		"debug_message": "             Hello world!"
+	},
+
+	"shell_cmd": "call \"%vs_directory%\\VC\\vcvarsall.bat\" %build_platform% & cl %compiler_options% \"${file}\" & del \"${file_path}\\\\${file_base_name}.obj\"",
+	"file_regex": "^(.+)\\((\\d+)\\) : (.+)$",
+	"working_dir": "${file_path}",
+	"selector": "source.c, source.c++",
+	"variants": [
+		{
+			"name": "Run",
+			"shell_cmd": "IF EXIST \"${file_path}\\\\${file_base_name}.exe\" ((FOR /F %f IN ('dir ${file_name} ${file_base_name}.exe /B /O:-D /T:W /4') DO @IF NOT DEFINED f (set f=%f& IF \"%f\"==\"${file_name}\" echo %old_exe_warning%)) & set f=& start cmd /c \"\"${file_path}\\\\${file_base_name}.exe\" %exe_args% & pause\" && echo Started ${file_base_name}.exe...) ELSE (echo %no_exe_warning%)"
+		},
+		{
+			"name": "Clean",
+			"shell_cmd": "del \"${file_path}\\\\${file_base_name}.exe\" & del \"${file_path}\\\\${file_base_name}.pdb\" & del \"${file_path}\\\\${file_base_name}.ilk\" & del \"${file_path}\\\\vc120.pdb\""
+		},
+		{
+			"name": "Debug",
+			"shell_cmd": "call \"%vs_directory%\\VC\\vcvarsall.bat\" %build_platform% & devenv /debugexe \"${file_path}\\\\${file_base_name}.exe\" %exe_args% & del \"${file_path}\\\\${file_base_name}.v12\""
+			
+		},
+		{
+			"name": "Message",
+			"shell_cmd": "start \"DEBUG\" cmd /c \"mode con cols=38 lines=5 & color a & echo. & echo. & echo %debug_message% & echo. & pause>nul\""
+		}
+	]
+}
+
+// TEST: better file_regex to capture errors, doesn't work with
+// filepaths that have '(' in them like "Program Files (x86)"
+// remove the /EHsc to see one of these errors
+// go through errors with F4 & Shift+F4
+
+// TODO: maybe change some & to &&, makes it short circuit
+
+// TODO: improve the clean to not print errors, maybe always clean vc120 after build, idk what its used for
+
+// TODO: add echo's to all commands, like "Started program.exe..."
+
+// TODO: try to avoid using vcvarsall.bat by using a full path to cl
+// idk how to make cl the x64 version (like after vcvarsall.bat x64)
+
+// TODO: set the whole build system to run on windows only ("windows": ...)
+
+// TODO: add ability to debug in visual studio (devenv), add if exist EXE to it
+
+// TODO: mess with compiler options, /Z7 instead of /Zi?
+
+// TODO: have stderr of program shown in sublime output

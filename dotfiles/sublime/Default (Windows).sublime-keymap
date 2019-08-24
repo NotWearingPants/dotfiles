@@ -1,0 +1,5 @@
+[
+	{ "keys": ["f5"], "command": "build", "args": { "variant": "Run" }, "context": [ { "key": "selector", "operator": "equal", "operand": "source.c, source.c++" } ] },
+	{ "keys": ["f8"], "command": "build", "args": { "variant": "Clean" }, "context": [ { "key": "selector", "operator": "equal", "operand": "source.c, source.c++" } ] },
+	{ "keys": ["f10"], "command": "build", "args": { "variant": "Debug" }, "context": [ { "key": "selector", "operator": "equal", "operand": "source.c, source.c++" } ] }
+]
