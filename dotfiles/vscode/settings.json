@@ -64,8 +64,9 @@
         "--max-line-length=120"
     ],
 
-    "gitlens.keymap": "none",
+    "gitlens.keymap": "chorded",
     "gitlens.advanced.messages": {
+        // TODO: are these still necessary?
         "suppressShowKeyBindingsNotice": true,
         "suppressResultsExplorerNotice": true,
     },
