@@ -58,6 +58,7 @@
         "--argument-rgx=[a-z_][a-z0-9_]{2,}$",
         "--attribute-rgx=[a-z_][a-z0-9_]{2,}$",
 
+        // show the regex of a valid name in naming warnings
         "--include-naming-hint=y",
 
         // default is 100 but 120 fits the screen size
