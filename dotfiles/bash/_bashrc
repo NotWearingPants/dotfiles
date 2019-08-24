@@ -1,4 +1,5 @@
 # source the default bashrc that was put aside, before everything else
+# TODO: add all stuff from ubuntu's default bashrc to here and remove this include
 if [ -f ~/.bashrc_default ]; then
     . ~/.bashrc_default
 fi
