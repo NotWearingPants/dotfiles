@@ -1,0 +1,3 @@
+startup_message off
+caption always "%{Wc} %-Lw%{Kc}%{+b}%n%f* %t%{-}%{-}%+Lw %=%d/%m/%y %c:%s"
+#caption always "%{Wc} %-Lw%{Bc}%{+b}%n%f* %t%{-}%{-}%+Lw %=%d/%m/%y %c:%s"
