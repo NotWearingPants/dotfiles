@@ -46,6 +46,8 @@ alias oops=sudo !!
 bind "set completion-ignore-case on"
 # tab once not twice to show completion matches
 bind "set show-all-if-ambiguous on"
+# turn off the f***ing bell, make it visual
+bind "set bell-style visible"
 
 # TODO: make tab copmletion's ls colored
 
