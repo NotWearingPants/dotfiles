@@ -1,18 +1,40 @@
-function fish_prompt --description "Write out the prompt"
-    set -l color_cwd
-    set -l suffix
-    switch "$USER"
-        case root toor
-            if set -q fish_color_cwd_root
-                set color_cwd $fish_color_cwd_root
-            else
-                set color_cwd $fish_color_cwd
-            end
-            set suffix '#'
-        case '*'
-            set color_cwd $fish_color_cwd
-            set suffix '>'
-    end
+function fish_prompt --description 'Write out the prompt'
+    set_color normal
+    set -l last_status $status
 
-    echo -n -s "$USER" @ (prompt_hostname) ' ' (set_color $color_cwd) (prompt_pwd) (set_color normal) "$suffix "
+    # time
+    printf '[%s] ' (date +%R)
+
+    # user
+    set_color --bold green
+    echo -n "$USER"
+    set_color normal
+
+    # colon
+    echo -n ':'
+
+    # PWD
+    set_color --bold yellow # $fish_color_cwd
+    #echo -n (prompt_pwd)
+    set -l realhome ~
+    # TODO: put "..." if it is over a third of the screen width (tput cols)
+    echo -n "$PWD" | sed -e "s|^$realhome|~|"
+    set_color normal
+
+    # git
+    set_color --bold cyan
+    echo -n (__fish_git_prompt)
+    set_color normal
+
+    # dollar
+    if not test $last_status -eq 0
+        set_color $fish_color_error
+    end
+    switch "$USER"
+        case root
+            echo -n '# '
+        case '*'
+            echo -n '$ '
+    end
+    set_color normal
 end
