@@ -36,7 +36,7 @@
     ////////// EXTENSIONS //////////
     ////////////////////////////////
 
-    "python.pythonPath": "...", // TODO: add this somehow, and have it differ between platforms
+    // "python.pythonPath": "...", // TODO: add this somehow, and have it differ between platforms
     "python.linting.pylintArgs": [
         // disable docstring missing messages
         "--disable=C0111",
@@ -112,5 +112,5 @@
         "useRustfmt": true,
     },
 
-    "graphvizPreview.dotPath": "...", // TODO: add this somehow, and have it differ between platforms
+    // "graphvizPreview.dotPath": "...", // TODO: add this somehow, and have it differ between platforms
 }
