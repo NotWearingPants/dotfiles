@@ -1,0 +1,32 @@
+docker-compose
+capstone
+colorama
+ImageHash
+ipython
+kaitaistruct
+numpy
+opencv
+pefile
+piexif
+Pillow
+pwntools
+pycrypto
+pyelftools
+pygame
+pylint
+pypiwin32
+pyserial
+requests
+requests-html
+scapy
+twine
+virtualenv
+construct
+
+# to install packages from source
+setuptools
+wheel
+
+# python2 backports
+pathlib2; python_version < '3'
+subprocess32; python_version < '3'
