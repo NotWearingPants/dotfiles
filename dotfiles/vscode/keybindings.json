@@ -1,3 +1,7 @@
 [
-
+    {
+        "key": "ctrl+k ctrl+l",
+        "command": "gitlens.toggleLineBlame",
+        "when": "editorTextFocus",
+    }
 ]
