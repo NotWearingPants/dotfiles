@@ -1,0 +1,11 @@
+# security
+# TODO: these should apply only if this SSH is exposed to the internet
+Port 2222 #22
+LoginGraceTime 20
+PasswordAuthentication no
+PermitRootLogin no
+# TODO: somehow get the current user to here
+#AllowUsers ...
+
+# TODO: this should apply only if on WSL, because it doesn't support this feature
+UsePrivilegeSeparation no
