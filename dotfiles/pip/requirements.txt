@@ -1,26 +1,73 @@
-docker-compose
-capstone
-colorama
-ImageHash
+# IPython interpreter
 ipython
+
+# docker-compose command
+docker-compose
+
+# disassembler
+capstone
+
+# colored terminal text
+colorama
+
+# hash algorithms for checking image similarity
+ImageHash
+
+# Kaitai Struct
 kaitaistruct
+
+# fast number arrays manipulation
 numpy
+
+# computer vision library
 opencv
+
+# parse PE files
 pefile
-piexif
-Pillow
-pwntools
-pycrypto
+
+# parse ELF files
 pyelftools
+
+# parse EXIF data from JPG images
+piexif
+
+# image library
+Pillow
+
+# CTF utilities
+pwntools
+
+# crypto algorithms
+pycrypto
+
+# game framework
 pygame
+
+# linter
 pylint
+
+# Win32 API bindings
 pypiwin32
+
+# serial port API for COM over USB
 pyserial
+
+# HTTP library
 requests
+
+# HTTP library with HTML parsing
 requests-html
+
+# packet sniffer and manipulation library
 scapy
+
+# PyPI package publisher
 twine
+
+# isolated python environment manager
 virtualenv
+
+# struct parser
 construct
 
 # to install packages from source
