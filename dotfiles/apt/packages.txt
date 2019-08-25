@@ -1,0 +1,113 @@
+# after each package there is a comment with the commands i want from it
+
+fish # fish
+# TODO: somehow install bat, it's not in apt yet (https://github.com/sharkdp/bat)
+nasm # nasm
+file # file
+gdb # gdb
+gdbserver # gdbserver
+gcc # gcc
+g++ # g++
+passwd # passwd chsh
+bash # bash
+bash-completion # /usr/share/bash-completion
+netcat-openbsd # nc
+nodejs # nodejs
+npm # npm
+php # php
+python3-minimal # python3
+python3-pip # pip
+make # make
+util-linux # unshare lsblk dmesg mkfs
+vim # vim view
+neovim # nvim
+vim-common # xxd
+bsdmainutils # hexdump
+nano # nano
+cowsay # cowsay
+toilet # toilet
+figlet # figlet
+fortune # fortune
+sl # sl
+tar # tar
+strace # strace
+ltrace # ltrace
+man-db # man whatis apropos
+openssh-client # ssh ssh-keygen
+openssh-server # sshd
+tcpdump # tcpdump
+mount # mount umount
+jq # jq
+less # less
+git # git
+wget # wget
+curl # curl
+grep # grep
+pv # pv
+gzip # gzip gunzip
+zip # zip
+unzip # unzip
+unrar # unrar
+xz-utils # unxz
+bzip2 # bunzip2
+debianutils # which
+patch # patch
+hostname # hostname
+sudo # sudo
+login # su
+ftp # ftp
+telnet # telnet
+sqlite3 # sqlite3
+findutils # xargs find
+tree # tree
+binutils # nm objdump readelf objcopy ld strip as strings ar
+libc-bin # ldd
+procps # ps top kill pkill w
+ncurses-bin # clear reset tput
+gawk # awk
+openssl # openssl
+sed # sed
+bc # bc
+coreutils # ls cp mv rm mkdir rmdir ln chmod chown chgrp touch sort uniq tr cat cut wc nl tee sha1sum md5sum base64 head tail df du basename dirname pwd id whoami uname date yes shuf timeout env sleep echo dd
+time # time
+iputils-ping # ping
+dnsutils # nslookup
+iproute2 # ip
+net-tools # netstat ifconfig route arp
+iptables # iptables
+traceroute # traceroute
+upstart # shutdown reboot
+dos2unix # dos2unix unix2dos
+diffutils # diff
+screen # screen
+tmux # tmux
+mlocate # locate
+parallel # parallel
+radare2 # r2
+clang # clang # TODO: add other commands we need from clang
+adb # adb
+
+# https://stackoverflow.com/questions/22300551/command-not-found-0-2-44-in-pips-freeze
+command-not-found # /usr/lib/command-not-found
+command-not-found-data # /usr/share/command-not-found/commands.db
+
+# TODO: these packages aren't called this way
+jre # java
+jdk # javac
+
+# TODO: only if ubuntu
+#dpkg # dpkg
+#apt # apt
+#lsb-release # lsb_release
+
+# TODO: only if termux
+#am
+#pm
+#settings
+#pkg
+#run-as
+#termux-clipboard-get
+#termux-clipboard-set
+#termux-open-url
+
+# TODO: somehow get /bin/sh
