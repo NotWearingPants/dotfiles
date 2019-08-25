@@ -1,20 +1,29 @@
 # IPython interpreter
 ipython
 
-# docker-compose command
-docker-compose
-
-# disassembler
-capstone
-
 # colored terminal text
 colorama
 
+# HTTP library
+requests
+
+# HTTP library with HTML parsing
+requests-html
+
+# packet sniffer and manipulation library
+scapy
+
+# isolated python environment manager
+virtualenv
+
+# image library
+Pillow
+
+# parse EXIF data from JPG images
+piexif
+
 # hash algorithms for checking image similarity
 ImageHash
-
-# Kaitai Struct
-kaitaistruct
 
 # fast number arrays manipulation
 numpy
@@ -28,11 +37,11 @@ pefile
 # parse ELF files
 pyelftools
 
-# parse EXIF data from JPG images
-piexif
+# Kaitai Struct
+kaitaistruct
 
-# image library
-Pillow
+# struct parser
+construct
 
 # CTF utilities
 pwntools
@@ -43,6 +52,12 @@ pycrypto
 # game framework
 pygame
 
+# docker-compose command
+docker-compose
+
+# disassembler
+capstone
+
 # linter
 pylint
 
@@ -52,23 +67,8 @@ pypiwin32
 # serial port API for COM over USB
 pyserial
 
-# HTTP library
-requests
-
-# HTTP library with HTML parsing
-requests-html
-
-# packet sniffer and manipulation library
-scapy
-
 # PyPI package publisher
 twine
-
-# isolated python environment manager
-virtualenv
-
-# struct parser
-construct
 
 # to install packages from source
 setuptools
