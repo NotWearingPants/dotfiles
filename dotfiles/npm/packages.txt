@@ -1,0 +1,25 @@
+# linter
+eslint
+
+# task runner
+gulp
+
+# web resource packer
+webpack
+
+# live-reload node program
+nodemon
+
+# live-reload static web-server
+# TODO: what about `serve`, `browser-sync`, or `livereload-js`?
+live-server
+
+# simple HTTP server
+http-server
+
+# colored terminal text
+chalk
+
+# check why node doesn't exit
+why-is-node-running
+wtfnode
