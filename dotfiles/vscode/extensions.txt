@@ -13,20 +13,20 @@ ritwickdey.LiveServer
 # Remote Development (SSH + WSL + Docker)
 ms-vscode-remote.vscode-remote-extensionpack
 
-# hex viewer
-slevesque.vscode-hexdump
-
 # spell checker
 streetsidesoftware.code-spell-checker
 
-# vim emulator
-vscodevim.vim
+# beautify HTML/CSS/JS/JSON
+HookyQR.beautify
 
 # TODO highlight
 wayou.vscode-todo-highlight
 
-# beautify HTML/CSS/JS/JSON
-HookyQR.beautify
+# hex viewer
+slevesque.vscode-hexdump
+
+# vim emulator
+vscodevim.vim
 
 # live preview dot files
 EFanZh.graphviz-preview
