@@ -28,6 +28,12 @@ slevesque.vscode-hexdump
 # vim emulator
 vscodevim.vim
 
+# Auto-Close HTML Tags in HTML-like languages
+formulahendry.auto-close-tag
+
+# Auto-Rename HTML Pair Tag
+formulahendry.auto-rename-tag
+
 # live preview dot files
 EFanZh.graphviz-preview
 
