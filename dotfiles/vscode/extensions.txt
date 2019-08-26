@@ -1,16 +1,24 @@
 # better Git integration
 eamodio.gitlens
 
+# show a cool git commit graph
+mhutchie.git-graph
+
+# auto-prefix Git commit messages with branch name
+srmeyers.git-prefix
+
 # ESLint integration
 dbaeumer.vscode-eslint
 
 # pair programming
+# TODO: make this work offline or don't install it when offline
 ms-vsliveshare.vsliveshare
 
 # live static HTTP server
 ritwickdey.LiveServer
 
-# Remote Development (SSH + WSL + Docker)
+# remote development (SSH + WSL + Docker)
+# TODO: make this work offline or don't install it when offline
 ms-vscode-remote.vscode-remote-extensionpack
 
 # spell checker
@@ -28,17 +36,45 @@ slevesque.vscode-hexdump
 # vim emulator
 vscodevim.vim
 
-# Auto-Close HTML Tags in HTML-like languages
+# auto-close HTML tags in HTML-like languages
 formulahendry.auto-close-tag
 
-# Auto-Rename HTML Pair Tag
+# auto-rename matching HTML tag
 formulahendry.auto-rename-tag
 
-# live preview dot files
-EFanZh.graphviz-preview
+# highlight matching HTML tag
+# TODO: is this really better than the built-in highlighting?
+vincaslt.highlight-matching-tag
+
+# debugger for Chrome
+msjsdiag.debugger-for-chrome
+
+# better markdown editing
+# TODO: change default keybindings because they override built-in ones
+yzhang.markdown-all-in-one
+
+# live preview for HTML
+daiyy.quick-html-previewer
+
+# live preview for SVG
+# TODO: is this already given by the live HTML preview?
+simonsiefke.svg-preview
 
 # edit CSV files as tables
 janisdd.vscode-edit-csv
+
+# live preview Graphviz (dot) files
+# NOTE: this is a fork of `stephanvs.dot` that seems to be more updated
+EFanZh.graphviz-preview
+
+# NPM package.json linter and NPM script runner
+eg2.vscode-npm-script
+
+# auto-complete NPM modules in import/require statements
+christian-kohler.npm-intellisense
+
+# run JS while typing
+wallabyjs.quokka-vscode
 
 # open GitHub repo remotely
 eamodio.remotehub
@@ -76,6 +112,8 @@ maziac.asm-code-lens
 kalitaalexey.vscode-rust
 
 # Kotlin
+# TODO: which is better? should i keep both?
+fwcd.kotlin
 mathiasfrohlich.Kotlin
 
 # Java
@@ -88,6 +126,9 @@ dunstontc.viml
 
 # fish shell script
 skyapps.fish-vscode
+
+# Graphviz (dot)
+joaompinto.vscode-graphviz
 
 # Linker Script
 ZixuanWang.linkerscript
