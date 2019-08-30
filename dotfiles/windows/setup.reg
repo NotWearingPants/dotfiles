@@ -22,3 +22,8 @@ Windows Registry Editor Version 5.00
 
 ; open explorer folder windows in a separate process
 "SeparateProcess"=dword:1
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize]
+
+; use dark theme
+"AppsUseLightTheme"=dword:0
