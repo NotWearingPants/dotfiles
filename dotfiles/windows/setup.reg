@@ -1,0 +1,24 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+
+; show file extensions
+"HideFileExt"=dword:0
+
+; show hidden files (NOTE: 1 is to show, 2 is to hide)
+"Hidden"=dword:1
+
+; don't show system files
+"ShowSuperHidden"=dword:0
+
+; use cmd instead of powershell
+"DontUsePowerShellOnWinX"=dword:1
+
+; open explorer on "This PC" (NOTE: 1 is for "This PC", 2 is for "Quick Access")
+"LaunchTo"=dword:1
+
+; don't show seconds in clock
+"ShowSecondsInSystemClock"=dword:0
+
+; open explorer folder windows in a separate process
+"SeparateProcess"=dword:1
