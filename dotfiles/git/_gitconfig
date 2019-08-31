@@ -1,0 +1,7 @@
+[user]
+# TODO: get these values somehow
+#	name = ...
+#	email = ...
+
+[core]
+	autocrlf = false
