@@ -68,6 +68,14 @@ capstone
 # linter
 pylint
 
+# refactoring utilities
+rope
+bowler
+
+# code metrics utilities
+wily
+radon
+
 # Win32 API bindings
 pypiwin32
 
