@@ -10,6 +10,9 @@ requests
 # HTTP library with HTML parsing
 requests-html
 
+# HTML parsing
+BeautifulSoup4
+
 # packet sniffer and manipulation library
 # TODO: maybe pyshark?
 scapy
