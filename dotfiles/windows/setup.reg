@@ -45,3 +45,42 @@ Windows Registry Editor Version 5.00
 ; set symbol path
 ; TODO: get this somehow
 ;"_NT_SYMBOL_PATH"="src*...*..."
+
+;; console host settings
+[HKEY_CURRENT_USER\Console]
+
+; "Consolas" font
+"FaceName"="Consolas"
+; TODO: is this necessary?
+"FontFamily"=dword:36
+
+; 20pt font with normal weight
+"FontSize"=dword:140000 ; 20pt = 0x14
+"FontWeight"=dword:190 ; 400 = 0x190
+
+; 80% transparent
+"WindowAlpha"=dword:ce ; 80% = 0xCE / 0xFF = 206 / 255
+
+; set cursor to be 25% high
+"CursorSize"=dword:19 ; 25% = 0x19 / 100
+
+; enable Ctrl+C/V for copy/paste
+"CtrlKeyShortcutsDisabled"=dword:0
+
+; use Ctrl+Shift+C/V as additional shortcuts for copy/paste
+"InterceptCopyPaste"=dword:1
+
+; set window size to 135x35
+"WindowSize"=dword:210087 ; 35 = 0x21, 135=0x87
+
+; set vertical buffer size to maximum (0x7FFF)
+"ScreenBufferSize"=dword:7fff0000
+
+; enable quick-edit
+"QuickEdit"=dword:1
+
+; enable word-wrap
+"LineWrap"=dword:1
+
+; remember the last 0x1000 commands
+"HistoryBufferSize"=dword:1000
