@@ -27,3 +27,8 @@ Windows Registry Editor Version 5.00
 
 ; use dark theme
 "AppsUseLightTheme"=dword:0
+
+[HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor]
+
+; run a script on cmd startup
+"AutoRun"="%USERPROFILE%\\profile.cmd"
