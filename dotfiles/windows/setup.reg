@@ -32,3 +32,16 @@ Windows Registry Editor Version 5.00
 
 ; run a script on cmd startup
 "AutoRun"="%USERPROFILE%\\profile.cmd"
+
+;; system environment variables
+[HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\Environment]
+
+;; user environment variables
+[HKEY_CURRENT_USER\Environment]
+
+; change the extensions that are added automatically when running things
+"PATHEXT"=".COM;.EXE;.BAT;.CMD;.MSC"
+
+; set symbol path
+; TODO: get this somehow
+;"_NT_SYMBOL_PATH"="src*...*..."
