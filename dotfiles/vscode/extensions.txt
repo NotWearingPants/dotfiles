@@ -10,9 +10,21 @@ srmeyers.git-prefix
 # ESLint integration
 dbaeumer.vscode-eslint
 
+# linter for markdown
+davidanson.vscode-markdownlint
+
 # pair programming
 # TODO: make this work offline or don't install it when offline
 ms-vsliveshare.vsliveshare
+
+# tests UI
+hbenl.vscode-test-explorer
+
+# tests status bar info
+connorshea.vscode-test-explorer-status-bar
+
+# tests UI over remote pair-programming session
+hbenl.vscode-test-explorer-liveshare
 
 # clipboard history
 sirtobi.code-clip-ring
@@ -33,11 +45,20 @@ HookyQR.beautify
 # TODO highlight
 wayou.vscode-todo-highlight
 
+# TODO file tree
+gruntfuggly.todo-tree
+
 # hex viewer
 slevesque.vscode-hexdump
 
 # vim emulator
 vscodevim.vim
+
+# set a different tint color for each window
+johnpapa.vscode-peacock
+
+# bookmark lines in files and jump to them
+alefragnani.bookmarks
 
 # auto-close HTML tags in HTML-like languages
 formulahendry.auto-close-tag
@@ -85,6 +106,10 @@ eamodio.remotehub
 # GitHub PRs
 GitHub.vscode-pull-request-github
 
+# auto-completion powered by machine learning
+# TODO: only install if there is internet
+visualstudioexptteam.vscodeintellicode
+
 # display Excel files
 GrapeCity.gc-excelviewer
 
@@ -123,6 +148,13 @@ mathiasfrohlich.Kotlin
 redhat.java
 # Java Debugger
 vscjava.vscode-java-debug
+
+# Dockerfile & docker-compose.yml
+# this also adds docker commands
+ms-azuretools.vscode-docker
+
+# YAML
+redhat.vscode-yaml
 
 # vim script
 dunstontc.viml
