@@ -30,7 +30,7 @@ ImageHash
 numpy
 
 # computer vision library
-opencv
+opencv-python
 
 # parse PE files
 pefile
