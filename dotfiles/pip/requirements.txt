@@ -56,6 +56,9 @@ pycrypto
 # game framework
 pygame
 
+# web framework
+Flask
+
 # docker-compose command
 docker-compose
 
