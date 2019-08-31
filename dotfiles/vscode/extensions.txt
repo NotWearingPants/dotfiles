@@ -145,6 +145,9 @@ redhat.java
 # Java Debugger
 vscjava.vscode-java-debug
 
+# PowerShell
+ms-vscode.powershell
+
 # Dockerfile & docker-compose.yml
 # this also adds docker commands
 ms-azuretools.vscode-docker
