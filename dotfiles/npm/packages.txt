@@ -29,3 +29,14 @@ chalk
 # check why node doesn't exit
 why-is-node-running
 wtfnode
+
+
+# framework specific CLIs, disabled until needed
+#@angular/cli
+#create-react-app
+#create-react-native-app
+#react-native-cli
+#expo-cli
+#nativescript
+#phonegap
+#polymer-cli
