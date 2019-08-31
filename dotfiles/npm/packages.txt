@@ -10,6 +10,12 @@ webpack
 # live-reload node program
 nodemon
 
+# run JS or Node.js code in a sandbox
+vm2
+
+# run command using local npm binaries
+npx
+
 # live-reload static web-server
 # TODO: what about `serve`, `browser-sync`, or `livereload-js`?
 live-server
