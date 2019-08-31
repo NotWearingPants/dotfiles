@@ -96,11 +96,14 @@ christian-kohler.npm-intellisense
 # run JS while typing
 wallabyjs.quokka-vscode
 
+# GitHub PRs
+GitHub.vscode-pull-request-github
+
 # open GitHub repo remotely
 eamodio.remotehub
 
-# GitHub PRs
-GitHub.vscode-pull-request-github
+# open current file in remote VCS
+ziyasal.vscode-open-in-github
 
 # auto-completion powered by machine learning
 # TODO: only install if there is internet
