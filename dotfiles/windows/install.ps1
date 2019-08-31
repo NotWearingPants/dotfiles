@@ -1,0 +1,1 @@
+regedit $PSScriptRoot\setup.reg
