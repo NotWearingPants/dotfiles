@@ -80,10 +80,6 @@ yzhang.markdown-all-in-one
 # live preview for HTML
 daiyy.quick-html-previewer
 
-# live preview for SVG
-# TODO: is this already given by the live HTML preview?
-simonsiefke.svg-preview
-
 # edit CSV files as tables
 janisdd.vscode-edit-csv
 
@@ -161,6 +157,10 @@ dunstontc.viml
 
 # fish shell script
 skyapps.fish-vscode
+
+# SVG
+# this also adds a live preview
+jock.svg
 
 # Graphviz (dot)
 joaompinto.vscode-graphviz
