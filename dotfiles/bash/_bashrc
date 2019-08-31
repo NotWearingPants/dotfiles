@@ -57,7 +57,7 @@ alias ....=../../..
 alias .....=../../../..
 alias ......=../../../../..
 
-# extra stuff for maxOS, make it like zsh and some aliases
+# extra stuff for macOS, make it like zsh and some aliases
 if [[ $os == 'Mac' ]]; then
     alias l='ls -lah'
     alias la='ls -lAh'
