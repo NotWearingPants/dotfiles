@@ -173,3 +173,6 @@ joaompinto.vscode-graphviz
 
 # Linker Script
 ZixuanWang.linkerscript
+
+# Windows Registry Script (.reg)
+ionutvmi.reg
