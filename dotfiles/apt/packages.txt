@@ -70,7 +70,7 @@ gawk # awk
 openssl # openssl
 sed # sed
 bc # bc
-coreutils # ls cp mv rm mkdir rmdir ln chmod chown chgrp touch sort uniq tr cat cut wc nl tee sha1sum md5sum base64 head tail df du basename dirname pwd id whoami uname date yes shuf timeout env sleep echo dd
+coreutils # ls cp mv rm mkdir rmdir ln chmod chown chgrp touch sort uniq tr cat cut wc nl tee sha1sum md5sum base64 head tail df du basename dirname readlink pwd id whoami uname date yes shuf timeout env sleep echo dd who
 time # time
 iputils-ping # ping
 dnsutils # nslookup
