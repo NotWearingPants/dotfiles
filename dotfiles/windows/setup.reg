@@ -42,6 +42,9 @@ Windows Registry Editor Version 5.00
 ; change the extensions that are added automatically when running things
 "PATHEXT"=".COM;.EXE;.BAT;.CMD;.MSC"
 
+; CMD prompt
+"PROMPT"="[$T$H$H$H$H$H$H]$S$P$G$S"
+
 ; set symbol path
 ; TODO: get this somehow
 ;"_NT_SYMBOL_PATH"="src*...*..."
