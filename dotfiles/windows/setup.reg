@@ -43,6 +43,7 @@ Windows Registry Editor Version 5.00
 "PATHEXT"=".COM;.EXE;.BAT;.CMD;.MSC"
 
 ; CMD prompt
+; TODO: when the hours are single-digit it pads with spaces instead of zeros (e.g. " 8:00")
 "PROMPT"="[$T$H$H$H$H$H$H]$S$P$G$S"
 
 ; set symbol path
