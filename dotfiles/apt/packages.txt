@@ -93,9 +93,9 @@ adb # adb
 command-not-found # /usr/lib/command-not-found
 command-not-found-data # /usr/share/command-not-found/commands.db
 
-# TODO: these packages aren't called this way
-jre # java
-jdk # javac
+# java and friends
+openjdk-11-jre-headless # java
+openjdk-11-jdk-headless # javac javap jar jarsigner
 
 # TODO: only if ubuntu
 #dpkg # dpkg
