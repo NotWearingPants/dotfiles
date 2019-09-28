@@ -3,6 +3,8 @@
     //////////   VSCODE   //////////
     ////////////////////////////////
 
+    "files.eol": "\n",
+
     // TODO: depends on the screen
     "window.zoomLevel": 0,
 
