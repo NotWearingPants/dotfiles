@@ -4,6 +4,11 @@
     ////////////////////////////////
 
     "files.eol": "\n",
+    "files.associations": {
+        // Flash ActionScript looks a lot like JS, and the available
+        // syntax highlighting extensions don't highlight everything
+        "*.as": "javascript",
+    },
 
     // TODO: depends on the screen
     "window.zoomLevel": 0,
