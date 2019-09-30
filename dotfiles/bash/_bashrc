@@ -12,6 +12,7 @@ case "$(uname -s)" in
     MINGW*)     os=Windows;;
 esac
 
+
 # greetings
 # TODO: set these somehow
 #NAME=...
@@ -20,6 +21,13 @@ esac
 #toilet -t --font mono9 --metal "$NAME"
 #toilet -t --font mono12 --gay "$NAME"
 #cowsay -f stegosaurus "Welcome, $NAME"
+
+# unlimited history filesize
+HISTSIZE=
+HISTFILESIZE=
+
+# cd to directory by just typing its name
+#shopt -s autocd
 
 # add directories to PATH
 # TODO: get PATH directories somehow
