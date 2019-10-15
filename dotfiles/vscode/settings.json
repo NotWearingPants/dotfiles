@@ -29,6 +29,7 @@
     "terminal.integrated.shell.windows": "C:\\WINDOWS\\Sysnative\\cmd.exe",
     "terminal.integrated.rendererType": "canvas",
     "terminal.integrated.scrollback": 9999,
+    "terminal.integrated.confirmOnExit": true,
     // be able to use Ctrl+B to toggle the sidebar when the terminal is focused
     "terminal.integrated.commandsToSkipShell": [
         "workbench.action.toggleSidebarVisibility"
