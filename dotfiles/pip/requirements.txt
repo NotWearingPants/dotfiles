@@ -35,6 +35,9 @@ numpy
 # computer vision library
 opencv-python
 
+# data manipulation and analysis
+pandas
+
 # parse PE files
 pefile
 
@@ -65,8 +68,17 @@ docker-compose
 # disassembler
 capstone
 
+# Win32 API bindings
+pypiwin32
+
+# serial port API for COM over USB
+pyserial
+
 # linter
 pylint
+
+# jupyter notebook (GUI REPL)
+jupyter
 
 # refactoring utilities
 rope
@@ -75,12 +87,6 @@ bowler
 # code metrics utilities
 wily
 radon
-
-# Win32 API bindings
-pypiwin32
-
-# serial port API for COM over USB
-pyserial
 
 # PyPI package publisher
 twine
