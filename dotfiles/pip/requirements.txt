@@ -45,7 +45,7 @@ pefile
 pyelftools
 
 # parse and create PDF files
-pypdf2
+pypdf4
 
 # Kaitai Struct
 kaitaistruct
