@@ -65,6 +65,9 @@ pygame
 # web framework
 Flask
 
+# database ORM
+SQLAlchemy
+
 # docker-compose command
 docker-compose
 
