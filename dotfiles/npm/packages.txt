@@ -2,11 +2,17 @@
 npm
 yarn
 
+# run command using local npm binaries
+npx
+
 # linter
 eslint
 
 # task runner
 gulp
+
+# project generator (Yeoman)
+yo
 
 # web resource packer
 webpack
@@ -16,9 +22,6 @@ nodemon
 
 # run JS or Node.js code in a sandbox
 vm2
-
-# run command using local npm binaries
-npx
 
 # live-reload static web-server
 # TODO: what about `serve`, `browser-sync`, or `livereload-js`?
@@ -36,10 +39,10 @@ wtfnode
 
 
 # framework specific CLIs, disabled until needed
+#@vue/cli
 #@angular/cli
 #create-react-app
 #create-react-native-app
-#react-native-cli
 #expo-cli
 #nativescript
 #phonegap

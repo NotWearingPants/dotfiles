@@ -1,0 +1,31 @@
+# Useful commands such as "sudo" and "shasum"
+psutils
+
+nodejs
+git
+git-filter-repo
+wireshark
+fiddler
+graphviz
+paint.net
+vlc
+adb
+sqlite
+rustup
+kotlin-native
+beyondcompare
+sysinternals
+winscp
+spacesniffer
+wabt
+llvm
+vcxsrv
+neovim
+flashplayer-sa
+
+# Java Decompiler (the command is jd-cli)
+jd-cmd
+
+# TODO: consider
+#gow
+#clink
