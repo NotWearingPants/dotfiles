@@ -12,4 +12,9 @@
 	{ "key": "ctrl+r t", "command": "-npm-script.test" },
 	{ "key": "ctrl+r l", "command": "-npm-script.showOutput" },
 	{ "key": "ctrl+r shift+x", "command": "-npm-script.terminate-script" },
+
+	// remove all the annoying github Ctrl+L chords to allow using Ctrl+L in the terminal
+	{ "key": "ctrl+l c", "command": "-extension.copyGitHubLinkToClipboard" },
+	{ "key": "ctrl+l g", "command": "-extension.openInGitHub" },
+	{ "key": "ctrl+l p", "command": "-extension.openPrGitProvider" },
 ]
