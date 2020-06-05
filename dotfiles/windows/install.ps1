@@ -26,8 +26,9 @@ New-Item -ItemType SymbolicLink "$env:USERPROFILE\profile.cmd" -Target "$PSScrip
 Invoke-WebRequest -UseBasicParsing https://get.scoop.sh/ | Invoke-Expression
 # TOOD: we might need to reload the PATH here before we use scoop
 
-# add the `extras` bucket to scoop
+# add the `extras` and `games` buckets to scoop
 scoop bucket add extras
+scoop bucket add games
 
 # scoop config 7ZIPEXTRACT_USE_EXTERNAL true
 

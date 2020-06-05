@@ -1,6 +1,7 @@
 # Useful commands such as "sudo" and "shasum"
 psutils
 
+7zip
 nodejs
 git
 git-filter-repo
@@ -27,13 +28,10 @@ sublime-text
 ida-free
 wabt
 mongodb
+everything
 
 # Docker Toolbox (installs docker client and docker-machine)
 docker
-
-# Adobe Flash Player Projector (https://www.adobe.com/support/flashplayer/debug_downloads.html)
-# to play flash games without a browser
-flashplayer-sa
 
 # Java decompiler (the command is jd-cli)
 jd-cmd
@@ -46,4 +44,21 @@ ilspy
 #gow
 #clink
 
+# x86 PC emulator
+bochs
+
+# Adobe Flash Player Projector (https://www.adobe.com/support/flashplayer/debug_downloads.html)
+# to play flash games without a browser
+flashplayer-sa
+
+# PPSSPP - a PSP emulator
+ppsspp
+
+# a game emulator for several consoles
 ./scoop-bizhawk.json
+
+# AMIDST - Mincraft map explorer
+amidst
+
+# NBTExplorer - Minecraft world save explorer
+nbtexplorer
