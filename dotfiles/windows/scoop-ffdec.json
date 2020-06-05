@@ -1,0 +1,12 @@
+{
+	"homepage": "https://github.com/jindrapetrik/jpexs-decompiler",
+	"version": "11.3.0",
+	"url": "https://github.com/jindrapetrik/jpexs-decompiler/releases/download/version11.3.0/ffdec_11.3.0.zip",
+	"checkver": "github",
+	"autoupdate": {
+		"url": "https://github.com/jindrapetrik/jpexs-decompiler/releases/download/$version/ffdec_$version.zip"
+	},
+	"bin": [
+		"ffdec.exe"
+	]
+}

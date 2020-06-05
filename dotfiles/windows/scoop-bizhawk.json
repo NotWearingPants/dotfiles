@@ -1,0 +1,12 @@
+{
+	"homepage": "https://github.com/TASVideos/BizHawk",
+	"version": "2.4.2",
+	"url": "https://github.com/TASVideos/BizHawk/releases/download/2.4.2/BizHawk-2.4.2.zip",
+	"checkver": "github",
+	"autoupdate": {
+		"url": "https://github.com/TASVideos/BizHawk/releases/download/$version/BizHawk-$version.zip"
+	},
+	"bin": [
+		["EmuHawk.exe", "BizHawk"]
+	]
+}
