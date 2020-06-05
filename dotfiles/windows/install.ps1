@@ -13,7 +13,7 @@ Enable-WindowsOptionalFeature -Online -FeatureName TelnetClient
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 # TODO: restart if needed
 
-# TODO: install Ubuntu (WSL) and Windows Terminal from the Microsoft Store somehow
+# TODO: install {Ubuntu (WSL), Windows Terminal, Windbg Preview} from the Microsoft Store somehow
 
 # create a link to the `profile.cmd` file that runs when cmd starts
 # TODO: check if it already exists - fail if it exists and isn't our link, but pass if it is
