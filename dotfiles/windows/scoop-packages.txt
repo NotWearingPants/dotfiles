@@ -27,6 +27,8 @@ sublime-text
 ida-free
 wabt
 mongodb
+
+# Docker Toolbox (installs docker client and docker-machine)
 docker
 
 # Adobe Flash Player Projector (https://www.adobe.com/support/flashplayer/debug_downloads.html)
