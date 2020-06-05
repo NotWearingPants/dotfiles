@@ -39,6 +39,9 @@ docker
 # JDK + JRE
 openjdk
 
+# pack and unpack Android APK files (doesn't decompile)
+apktool
+
 # Java decompiler (the command is jd-cli)
 jd-cmd
 # C# decompiler
