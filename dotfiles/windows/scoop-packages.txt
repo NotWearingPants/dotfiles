@@ -24,6 +24,10 @@ neovim
 gitkraken
 dotnet-sdk
 sublime-text
+ida-free
+wabt
+mongodb
+docker
 
 # Adobe Flash Player Projector (https://www.adobe.com/support/flashplayer/debug_downloads.html)
 # to play flash games without a browser
