@@ -21,6 +21,7 @@ spacesniffer
 wabt
 llvm
 neovim
+gitkraken
 
 # Adobe Flash Player Projector (https://www.adobe.com/support/flashplayer/debug_downloads.html)
 # to play flash games without a browser
