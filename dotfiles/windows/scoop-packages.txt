@@ -10,6 +10,7 @@ graphviz
 paint.net
 vlc
 adb
+nasm
 sqlite
 rustup
 kotlin-native
@@ -19,7 +20,6 @@ winscp
 spacesniffer
 wabt
 llvm
-vcxsrv
 neovim
 flashplayer-sa
 
