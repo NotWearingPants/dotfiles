@@ -27,12 +27,15 @@ gitkraken
 # to play flash games without a browser
 flashplayer-sa
 
-# Java Decompiler (the command is jd-cli)
+# Java decompiler (the command is jd-cli)
 jd-cmd
+# C# decompiler
+ilspy
+# Flash decompiler
+./scoop-ffdec.json
 
 # TODO: consider
 #gow
 #clink
 
 ./scoop-bizhawk.json
-./scoop-ffdec.json
