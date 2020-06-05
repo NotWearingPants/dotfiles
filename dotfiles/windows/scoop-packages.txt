@@ -33,6 +33,9 @@ everything
 # Docker Toolbox (installs docker client and docker-machine)
 docker
 
+# JDK + JRE
+openjdk
+
 # Java decompiler (the command is jd-cli)
 jd-cmd
 # C# decompiler
