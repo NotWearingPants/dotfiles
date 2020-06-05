@@ -8,5 +8,5 @@ function Install-NPMPackages {
     "Finished installing all packages."    
 }
 
-$packagesToInstall = sls '^[^#]' $PSScriptRoot\packages.txt | select -expand line
+$packagesToInstall = (Select-String '^[^#]' $PSScriptRoot\packages.txt).Line
 Install-NPMPackages $packagesToInstall
