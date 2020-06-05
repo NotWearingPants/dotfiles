@@ -25,10 +25,13 @@ neovim
 gitkraken
 dotnet-sdk
 sublime-text
-ida-free
 wabt
 mongodb
 everything
+virtualbox-np
+
+# TODO: find a 32bit version to be able to open old .idb files, IDA free is 64bit and uses .i64 only
+ida-free
 
 # Docker Toolbox (installs docker client and docker-machine)
 docker
@@ -44,6 +47,7 @@ ilspy
 ./scoop-ffdec.json
 
 # TODO: consider
+#autohotkey
 #gow
 #clink
 

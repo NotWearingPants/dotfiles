@@ -26,10 +26,11 @@ New-Item -ItemType SymbolicLink "$env:USERPROFILE\profile.cmd" -Target "$PSScrip
 Invoke-WebRequest -UseBasicParsing https://get.scoop.sh/ | Invoke-Expression
 # TOOD: we might need to reload the PATH here before we use scoop
 
-# add the `extras` and `games` and `java` buckets to scoop
+# add additional buckets to scoop
 scoop bucket add extras
 scoop bucket add games
 scoop bucket add java
+scoop bucket add nonportable
 
 # install scoop packages
 $scoopPackagesToInstall = (Select-String '^[^#]' $PSScriptRoot\scoop-packages.txt).Line
