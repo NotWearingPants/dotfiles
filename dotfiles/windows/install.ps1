@@ -37,3 +37,5 @@ Invoke-WebRequest -UseBasicParsing https://chocolatey.org/install.ps1 | Invoke-E
 
 # install chocolatey packages
 choco install -y .\chocolatey-packages.config
+
+# TODO: use `rustup` installed by scoop to install `rustc` and `cargo`
