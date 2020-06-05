@@ -23,6 +23,9 @@ nodemon
 # run JS or Node.js code in a sandbox
 vm2
 
+# an advanced javascript compiler (minifies and optimizes)
+google-closure-compiler
+
 # live-reload static web-server
 # TODO: what about `serve`, `browser-sync`, or `livereload-js`?
 live-server
