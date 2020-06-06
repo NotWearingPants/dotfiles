@@ -17,7 +17,7 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 
 # create a link to the `profile.cmd` file that runs when cmd starts
 # TODO: check if it already exists - fail if it exists and isn't our link, but pass if it is
-New-Item -ItemType SymbolicLink "$env:USERPROFILE\profile.cmd" -Target "$PSScriptRoot\profile.cmd"
+New-Item -ItemType SymbolicLink "~\profile.cmd" -Target "$PSScriptRoot\profile.cmd"
 
 # force tls1.2 for increased security before running powershell scripts from the web
 [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor [System.Net.SecurityProtocolType]::Tls12
