@@ -52,6 +52,10 @@ adb
 # pack and unpack Android APK files (doesn't decompile)
 apktool
 
+# TODO: consider for android reversing
+#jadx
+#dex2jar
+
 # Java decompiler (the command is jd-cli)
 jd-cmd
 # C# decompiler
