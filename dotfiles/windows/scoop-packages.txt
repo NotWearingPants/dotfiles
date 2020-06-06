@@ -44,7 +44,8 @@ docker
 openjdk
 
 # TODO: install Visual Studio Build Tools (for CL, Spy++, NMake, MSBuild)
-# TODO: install WinDBG 64bit (for windbg, cdb, gflags, symchk)
+
+./scoop-windbg.json
 
 adb
 
