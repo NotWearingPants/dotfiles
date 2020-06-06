@@ -13,7 +13,6 @@ git-filter-repo
 wireshark
 fiddler
 graphviz
-paint.net
 vlc
 nasm
 sqlite
@@ -33,6 +32,10 @@ wabt
 mongodb
 everything
 virtualbox-np
+
+paint.net
+./scoop-paintdotnet-plugin-pack-boltbait.json
+./scoop-paintdotnet-plugin-pack-pyrochild.json
 
 # TODO: find a 32bit version to be able to open old .idb files, IDA free is 64bit and uses .i64 only
 ida-free
