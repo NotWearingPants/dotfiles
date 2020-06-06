@@ -8,4 +8,5 @@ doskey bash=echo No, run `wsl`
 doskey =exit
 
 :: greetings
-echo Welcome!
+:: TODO: this also outputs in non-login shells, make it stop
+REM echo Welcome!
