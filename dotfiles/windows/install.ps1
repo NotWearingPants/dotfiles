@@ -1,7 +1,7 @@
 #requires -RunAsAdministrator
 
 # change settings in registry
-regedit $PSScriptRoot\setup.reg
+reg import $PSScriptRoot\setup.reg
 
 # enable the telnet command
 # TODO: check if the feature is already enabled, and skip this
@@ -38,7 +38,9 @@ $scoopPackagesToInstall = (Select-String '^[^#]' $PSScriptRoot\scoop-packages.tx
 scoop install $scoopPackagesToInstall
 
 # allow applications and third-party installers to find python 3
-regedit ~\scoop\apps\python\current\install-pep-514.reg
+reg import ~\scoop\apps\python\current\install-pep-514.reg
+# add sublime to context menu
+reg import ~\scoop\apps\sublime-text\current\install-context.reg
 
 # install chocolatey
 Invoke-WebRequest -UseBasicParsing https://chocolatey.org/install.ps1 | Invoke-Expression
