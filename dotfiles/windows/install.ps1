@@ -28,13 +28,17 @@ Invoke-WebRequest -UseBasicParsing https://get.scoop.sh/ | Invoke-Expression
 
 # add additional buckets to scoop
 scoop bucket add extras
-scoop bucket add games
 scoop bucket add java
+scoop bucket add versions
 scoop bucket add nonportable
+scoop bucket add games
 
 # install scoop packages
 $scoopPackagesToInstall = (Select-String '^[^#]' $PSScriptRoot\scoop-packages.txt).Line
 scoop install $scoopPackagesToInstall
+
+# allow applications and third-party installers to find python 3
+regedit ~\scoop\apps\python\current\install-pep-514.reg
 
 # install chocolatey
 Invoke-WebRequest -UseBasicParsing https://chocolatey.org/install.ps1 | Invoke-Expression
