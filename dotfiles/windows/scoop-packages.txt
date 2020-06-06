@@ -34,8 +34,8 @@ everything
 virtualbox-np
 
 paint.net
-./scoop-paintdotnet-plugin-pack-boltbait.json
-./scoop-paintdotnet-plugin-pack-pyrochild.json
+./scoop-packages/paintdotnet-plugin-pack-boltbait.json
+./scoop-packages/paintdotnet-plugin-pack-pyrochild.json
 
 # TODO: find a 32bit version to be able to open old .idb files, IDA free is 64bit and uses .i64 only
 ida-free
@@ -48,7 +48,7 @@ openjdk
 
 # TODO: install Visual Studio Build Tools (for CL, Spy++, NMake, MSBuild)
 
-./scoop-windbg.json
+./scoop-packages/windbg.json
 
 adb
 
@@ -70,7 +70,7 @@ jd-cmd
 # C# decompiler
 ilspy
 # Flash decompiler
-./scoop-ffdec.json
+./scoop-packages/ffdec.json
 
 # TODO: consider
 #autohotkey
@@ -88,7 +88,7 @@ flashplayer-sa
 ppsspp
 
 # a game emulator for several consoles
-./scoop-bizhawk.json
+./scoop-packages/bizhawk.json
 
 # AMIDST - Mincraft map explorer
 amidst
