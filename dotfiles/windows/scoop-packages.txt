@@ -95,3 +95,6 @@ amidst
 
 # NBTExplorer - Minecraft world save explorer
 nbtexplorer
+
+# TODO: install GameMaker
+# TODO: install Groupy
