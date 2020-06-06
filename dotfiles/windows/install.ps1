@@ -32,6 +32,9 @@ scoop bucket add java
 scoop bucket add versions
 scoop bucket add nonportable
 scoop bucket add games
+# hackishly add ./scoop-packages as a bucket named "local", because scoop doesn't handle local packages well
+New-Item -Type Directory -Path ~\scoop\buckets\local
+New-Item -Type SymbolicLink -Path ~\scoop\buckets\local\bucket -Target $PWD\scoop-packages
 
 # install scoop packages
 $scoopPackagesToInstall = (Select-String '^[^#]' $PSScriptRoot\scoop-packages.txt).Line
