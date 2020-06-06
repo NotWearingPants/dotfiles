@@ -10,7 +10,6 @@ fiddler
 graphviz
 paint.net
 vlc
-adb
 nasm
 sqlite
 rustup
@@ -38,6 +37,16 @@ docker
 
 # JDK + JRE
 openjdk
+
+# TODO: install Visual Studio Build Tools (for CL, Spy++, NMake, MSBuild)
+# TODO: install WinDBG 64bit (for windbg, cdb, gflags, symchk)
+
+adb
+
+# TODO: the android-sdk package appears to be a bit broken
+# find a way to install the Android SDK, Android SDK Build Tools, and an emulator
+# or give up and just install android-studio
+#android-sdk
 
 # pack and unpack Android APK files (doesn't decompile)
 apktool

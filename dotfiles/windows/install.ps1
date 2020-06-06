@@ -44,3 +44,8 @@ Invoke-WebRequest -UseBasicParsing https://chocolatey.org/install.ps1 | Invoke-E
 choco install -y .\chocolatey-packages.config
 
 # TODO: use `rustup` installed by scoop to install `rustc` and `cargo`
+
+# TODO: install Chrome (without scoop/chocolatey)
+# TODO: install VS Code (without scoop/chocolatey)
+# TODO: install Steam (without scoop/chocolatey)
+# TODO: install Discord (without scoop/chocolatey)
