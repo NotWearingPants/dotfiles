@@ -49,4 +49,5 @@ wtfnode
 #expo-cli
 #nativescript
 #phonegap
+#cordova
 #polymer-cli
