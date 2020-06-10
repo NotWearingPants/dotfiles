@@ -5,6 +5,7 @@
 	"description": "BoltBait's Plugin Pack for paint.net",
 	"depends": "paint.net",
 	"url": "https://boltbait.com/pdn/BoltBaitPack50.zip",
+	"hash": "cc11b9b95d3033b582f4994071479430f4758c9fe403b3ca62b63e31f6514735",
 	"installer": {
 		"script": [
 			"$installerAssembly = [System.Reflection.Assembly]::Load([IO.File]::ReadAllBytes(\"$dir\\BoltBaitPackInstall50.exe\"))",
@@ -13,7 +14,7 @@
 			"$pluginsFileNames | ForEach-Object {",
 			"    $installerAssembly.GetManifestResourceStream('Install.Attachments.' + $_).",
 			"        CopyTo([IO.File]::OpenWrite(",
-			"            \"$dir\\..\\..\\..\\persist\\paint.net\\Effects\\$_\"",
+			"            \"$(persistdir paint.net)\\Effects\\$_\"",
 			"        ))",
 			"}",
 			"$pluginsFileNames | Out-File \"$dir\\plugins.txt\""
@@ -21,7 +22,7 @@
 	},
 	"uninstaller": {
 		"script": [
-			"Get-Content \"$dir\\plugins.txt\" | ForEach-Object { Remove-Item \"$dir\\..\\..\\..\\persist\\paint.net\\Effects\\$_\" }"
+			"Get-Content \"$dir\\plugins.txt\" | ForEach-Object { Remove-Item \"$(persistdir paint.net)\\Effects\\$_\" }"
 		]
 	}
 }
