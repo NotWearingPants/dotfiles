@@ -1,9 +1,11 @@
 {
 	"$schema": "https://raw.githubusercontent.com/lukesampson/scoop/master/schema.json",
-	"homepage": "https://github.com/TASVideos/BizHawk",
+    "homepage": "http://tasvideos.org/BizHawk.html",
 	"version": "2.4.2",
 	"url": "https://github.com/TASVideos/BizHawk/releases/download/2.4.2/BizHawk-2.4.2.zip",
-	"checkver": "github",
+    "checkver": {
+        "github": "https://github.com/TASVideos/BizHawk"
+    },
 	"autoupdate": {
 		"url": "https://github.com/TASVideos/BizHawk/releases/download/$version/BizHawk-$version.zip"
 	},
