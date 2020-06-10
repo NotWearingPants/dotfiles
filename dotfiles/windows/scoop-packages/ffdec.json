@@ -10,7 +10,8 @@
 	"autoupdate": {
 		"url": "https://github.com/jindrapetrik/jpexs-decompiler/releases/download/$version/ffdec_$version.zip"
 	},
-	"bin": [
-		"ffdec.exe"
+	"bin": "ffdec.exe",
+	"shortcuts": [
+		["ffdec.exe", "JPEXS Free Flash Decompiler"]
 	]
 }

@@ -29,6 +29,9 @@
 				"Windows Kits/10/Debuggers/x86/cdb.exe",
 				"Windows Kits/10/Debuggers/x86/gflags.exe",
 				"Windows Kits/10/Debuggers/x86/symchk.exe"
+			],
+			"shortcuts": [
+				["Windows Kits/10/Debuggers/x86/windbg.exe", "WinDbg"]
 			]
 		},
 		"64bit": {
@@ -37,6 +40,9 @@
 				"Windows Kits/10/Debuggers/x64/cdb.exe",
 				"Windows Kits/10/Debuggers/x64/gflags.exe",
 				"Windows Kits/10/Debuggers/x64/symchk.exe"
+			],
+			"shortcuts": [
+				["Windows Kits/10/Debuggers/x64/windbg.exe", "WinDbg"]
 			]
 		}
 	},

@@ -9,5 +9,8 @@
 	},
 	"bin": [
 		["EmuHawk.exe", "BizHawk"]
+	],
+	"shortcuts": [
+		["EmuHawk.exe", "BizHawk"]
 	]
 }
