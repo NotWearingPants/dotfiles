@@ -13,7 +13,7 @@
 			"$pluginsFileNames | ForEach-Object {",
 			"    $installerAssembly.GetManifestResourceStream('Install.Attachments.' + $_).",
 			"        CopyTo([IO.File]::OpenWrite(",
-			"            \"$dir\\..\\..\\paint.net\\current\\Effects\\$_\"",
+			"            \"$dir\\..\\..\\..\\persist\\paint.net\\Effects\\$_\"",
 			"        ))",
 			"}",
 			"$pluginsFileNames | Out-File \"$dir\\plugins.txt\""
@@ -21,7 +21,7 @@
 	},
 	"uninstaller": {
 		"script": [
-			"Get-Content \"$dir\\plugins.txt\" | ForEach-Object { Remove-Item \"$dir\\..\\..\\paint.net\\current\\Effects\\$_\" }"
+			"Get-Content \"$dir\\plugins.txt\" | ForEach-Object { Remove-Item \"$dir\\..\\..\\..\\persist\\paint.net\\Effects\\$_\" }"
 		]
 	}
 }

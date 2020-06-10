@@ -8,12 +8,12 @@
 	"installer": {
 		"script": [
 			"(Get-ChildItem \"$dir\\*.dll\").Name | Out-File \"$dir\\plugins.txt\"",
-			"Move-Item \"$dir\\*.dll\" \"$dir\\..\\..\\paint.net\\current\\Effects\\\""
+			"Move-Item \"$dir\\*.dll\" \"$dir\\..\\..\\..\\persist\\paint.net\\Effects\\\""
 		]
 	},
 	"uninstaller": {
 		"script": [
-			"Get-Content \"$dir\\plugins.txt\" | ForEach-Object { Remove-Item \"$dir\\..\\..\\paint.net\\current\\Effects\\$_\" }"
+			"Get-Content \"$dir\\plugins.txt\" | ForEach-Object { Remove-Item \"$dir\\..\\..\\..\\persist\\paint.net\\Effects\\$_\" }"
 		]
 	}
 }
