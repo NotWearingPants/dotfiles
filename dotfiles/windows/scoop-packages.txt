@@ -1,13 +1,3 @@
-# Useful commands such as "sudo" and "shasum"
-psutils
-
-# NOTE: it's important that python3 comes after python2
-# because they both add a "python" command and overwrite each other
-python27
-python
-# allow applications and third-party installers to find python 3
-python-feature-discoverable
-
 nodejs
 git
 git-filter-repo
@@ -29,14 +19,27 @@ llvm
 neovim
 gitkraken
 dotnet-sdk
-sublime-text
-sublime-text-feature-add-to-context-menu
-sublime-text-feature-package-control
 wabt
 mongodb
 everything
 virtualbox-np
 cff-explorer
+windbg
+adb
+
+# Useful commands such as "sudo" and "shasum"
+psutils
+
+# NOTE: it's important that python3 comes after python2
+# because they both add a "python" command and overwrite each other
+python27
+python
+# allow applications and third-party installers to find python 3
+python-feature-discoverable
+
+sublime-text
+sublime-text-feature-add-to-context-menu
+sublime-text-feature-package-control
 
 paint.net
 paintdotnet-plugin-pack-boltbait
@@ -52,10 +55,6 @@ docker
 openjdk
 
 # TODO: install Visual Studio Build Tools (for CL, Spy++, NMake, MSBuild)
-
-windbg
-
-adb
 
 # TODO: the android-sdk package appears to be a bit broken
 # find a way to make it work, or install the Android SDK, Android SDK Build Tools, and an emulator
