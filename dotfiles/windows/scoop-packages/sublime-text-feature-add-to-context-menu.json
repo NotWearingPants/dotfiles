@@ -1,6 +1,7 @@
 {
 	"$schema": "https://raw.githubusercontent.com/lukesampson/scoop/master/schema.json",
 	"version": "1.0.0",
+	"description": "Add Sublime Text as a context menu option",
 	"url": "file://C:/Windows/System32/notepad.exe",
 	"depends": "extras/sublime-text",
 	"installer": {

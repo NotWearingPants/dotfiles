@@ -1,6 +1,8 @@
 {
 	"$schema": "https://raw.githubusercontent.com/lukesampson/scoop/master/schema.json",
 	"version": "1.0.0",
+	"description": "Allow applications and third-party installers to find python",
+	"homepage": "https://www.python.org/dev/peps/pep-0514/",
 	"url": "file://C:/Windows/System32/notepad.exe",
 	"depends": "python",
 	"installer": {
