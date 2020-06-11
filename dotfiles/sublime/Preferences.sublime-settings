@@ -4,6 +4,10 @@
 	"drag_text": false,
 	"font_size": 11,
 	"highlight_modified_tabs": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
 	"material_theme_small_tab": true,
 	"shift_tab_unindent": true,
 	"show_tab_close_buttons": true,
