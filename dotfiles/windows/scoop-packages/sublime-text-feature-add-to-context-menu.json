@@ -1,0 +1,16 @@
+{
+	"$schema": "https://raw.githubusercontent.com/lukesampson/scoop/master/schema.json",
+	"version": "1.0.0",
+	"url": "file://C:/Windows/System32/notepad.exe",
+	"depends": "extras/sublime-text",
+	"installer": {
+		"script": [
+			"reg import \"$(appdir sublime-text)\\current\\install-context.reg\""
+		]
+	},
+	"uninstaller": {
+		"script": [
+			"reg import \"$(appdir sublime-text)\\current\\uninstall-context.reg\""
+		]
+	}
+}

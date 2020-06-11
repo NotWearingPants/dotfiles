@@ -5,6 +5,8 @@ psutils
 # because they both add a "python" command and overwrite each other
 python27
 python
+# allow applications and third-party installers to find python 3
+python-feature-discoverable
 
 nodejs
 git
@@ -28,6 +30,7 @@ neovim
 gitkraken
 dotnet-sdk
 sublime-text
+sublime-text-feature-add-to-context-menu
 wabt
 mongodb
 everything

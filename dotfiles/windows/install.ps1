@@ -40,11 +40,6 @@ New-Item -Type SymbolicLink -Path ~\scoop\buckets\local\bucket -Target $PWD\scoo
 $scoopPackagesToInstall = (Select-String '^[^#]' $PSScriptRoot\scoop-packages.txt).Line
 scoop install $scoopPackagesToInstall
 
-# allow applications and third-party installers to find python 3
-reg import ~\scoop\apps\python\current\install-pep-514.reg
-# add sublime to context menu
-reg import ~\scoop\apps\sublime-text\current\install-context.reg
-
 # install chocolatey
 Invoke-WebRequest -UseBasicParsing https://chocolatey.org/install.ps1 | Invoke-Expression
 # TOOD: we might need to reload the PATH here before we use choco

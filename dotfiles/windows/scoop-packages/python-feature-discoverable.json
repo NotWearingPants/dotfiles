@@ -1,0 +1,16 @@
+{
+	"$schema": "https://raw.githubusercontent.com/lukesampson/scoop/master/schema.json",
+	"version": "1.0.0",
+	"url": "file://C:/Windows/System32/notepad.exe",
+	"depends": "python",
+	"installer": {
+		"script": [
+			"reg import \"$(appdir python)\\current\\install-pep-514.reg\""
+		]
+	},
+	"uninstaller": {
+		"script": [
+			"reg import \"$(appdir python)\\current\\uninstall-pep-514.reg\""
+		]
+	}
+}
