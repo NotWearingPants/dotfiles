@@ -36,6 +36,7 @@ wabt
 mongodb
 everything
 virtualbox-np
+cff-explorer
 
 paint.net
 paintdotnet-plugin-pack-boltbait
