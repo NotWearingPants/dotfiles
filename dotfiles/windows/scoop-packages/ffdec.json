@@ -3,6 +3,11 @@
 	"homepage": "https://github.com/jindrapetrik/jpexs-decompiler",
 	"version": "11.3.0",
 	"url": "https://github.com/jindrapetrik/jpexs-decompiler/releases/download/version11.3.0/ffdec_11.3.0.zip",
+	"suggest": {
+		"JRE8": [
+			"java/oraclejre8"
+		]
+	},
 	"checkver": {
         "github": "https://github.com/jindrapetrik/jpexs-decompiler",
         "re": "/releases/tag/version([\\d.]+)"
