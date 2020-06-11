@@ -1,0 +1,19 @@
+{
+	"$schema": "https://raw.githubusercontent.com/lukesampson/scoop/master/schema.json",
+	"##": "We can get the version from https://github.com/wbond/package_control, but package-control updates itself",
+	"version": "1.0.0",
+	"description": "Add Package Control to Sublime Text",
+	"homepage": "https://packagecontrol.io/",
+	"url": "https://packagecontrol.io/Package Control.sublime-package",
+	"depends": "extras/sublime-text",
+	"installer": {
+		"script": [
+			"Move-Item -Force \"$dir\\Package Control.sublime-package\" \"$(appdir sublime-text)\\current\\Data\\Installed Packages\""
+		]
+	},
+	"uninstaller": {
+		"script": [
+			"Remove-Item \"$(appdir sublime-text)\\current\\Data\\Installed Packages\\Package Control.sublime-package\""
+		]
+	}
+}

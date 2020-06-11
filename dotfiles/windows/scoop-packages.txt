@@ -31,6 +31,7 @@ gitkraken
 dotnet-sdk
 sublime-text
 sublime-text-feature-add-to-context-menu
+sublime-text-feature-package-control
 wabt
 mongodb
 everything
