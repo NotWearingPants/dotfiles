@@ -7,3 +7,6 @@ $sublimeDataDirectory = "~\scoop\persist\sublime-text\Data"
 # TODO: check if it already exists - fail if it exists and isn't our link, but pass if it is
 # rm "$sublimeDataDirectory\Packages\User\Preferences.sublime-settings"
 New-Item -ItemType SymbolicLink "$sublimeDataDirectory\Packages\User\Preferences.sublime-settings" -Target "$PSScriptRoot\Preferences.sublime-settings"
+
+# also link the package control settings
+New-Item -ItemType SymbolicLink "$sublimeDataDirectory\Packages\User\Package Control.sublime-settings" -Target "$PSScriptRoot\Package Control.sublime-settings"
