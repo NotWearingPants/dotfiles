@@ -25,6 +25,7 @@ everything
 virtualbox-np
 cff-explorer
 windbg
+010editor
 adb
 
 # Useful commands such as "sudo" and "shasum"
