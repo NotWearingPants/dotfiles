@@ -53,6 +53,10 @@
     ////////// EXTENSIONS //////////
     ////////////////////////////////
 
+    // use python 3 from scoop
+    // TODO: this only works for Windows
+    "python.pythonPath": "~/scoop/shims/python.exe",
+
     // "python.pythonPath": "...", // TODO: add this somehow, and have it differ between platforms
     "python.linting.pylintArgs": [
         // disable docstring missing messages
