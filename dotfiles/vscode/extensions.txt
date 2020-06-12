@@ -73,6 +73,9 @@ vincaslt.highlight-matching-tag
 # debugger for Chrome
 msjsdiag.debugger-for-chrome
 
+# toggle ignoring node_modules on and off for when you want to find stuff in there
+eamodio.toggle-excluded-files
+
 # better markdown editing
 # TODO: change default keybindings because they override built-in ones
 yzhang.markdown-all-in-one
