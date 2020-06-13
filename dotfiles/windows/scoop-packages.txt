@@ -27,6 +27,7 @@ cff-explorer
 windbg
 010editor
 adb
+nmap
 
 # Useful commands such as "sudo" and "shasum"
 psutils
@@ -66,8 +67,10 @@ openjdk
 # pack and unpack Android APK files (doesn't decompile)
 apktool
 
+# unpack and decompile android apk
+jadx
+
 # TODO: consider for android reversing
-#jadx
 #dex2jar
 
 # Java decompiler (the command is jd-cli)
