@@ -54,3 +54,13 @@ choco install -y .\chocolatey-packages.config
 # TODO: install VS Code (without scoop/chocolatey)
 # TODO: install Steam (without scoop/chocolatey)
 # TODO: install Discord (without scoop/chocolatey)
+
+# setup everything
+$PSScriptRoot\..\docker\install.ps1
+$PSScriptRoot\..\git\install.ps1
+$PSScriptRoot\..\npm\install.ps1
+$PSScriptRoot\..\pip\install.ps1
+$PSScriptRoot\..\powershell\install.ps1
+$PSScriptRoot\..\sublime\install.ps1
+$PSScriptRoot\..\vim\install.ps1
+$PSScriptRoot\..\vscode\install.ps1

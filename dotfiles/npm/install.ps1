@@ -10,3 +10,6 @@ function Install-NPMPackages {
 
 $packagesToInstall = (Select-String '^[^#]' $PSScriptRoot\packages.txt).Line
 Install-NPMPackages $packagesToInstall
+
+# setup eslint
+$PSScriptRoot\..\eslint\install.ps1
