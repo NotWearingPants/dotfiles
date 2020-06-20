@@ -64,7 +64,9 @@ findutils # xargs find
 tree # tree
 binutils # nm objdump readelf objcopy ld strip as strings ar
 libc-bin # ldd
-procps # ps top kill pkill w
+procps # ps top kill pkill w pgrep
+sysvinit-utils # pidof
+htop # htop
 ncurses-bin # clear reset tput
 gawk # awk
 openssl # openssl
