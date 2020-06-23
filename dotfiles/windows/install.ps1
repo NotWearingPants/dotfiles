@@ -13,8 +13,6 @@ Enable-WindowsOptionalFeature -Online -FeatureName TelnetClient
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 # TODO: restart if needed
 
-# TODO: install {Ubuntu (WSL), Windows Terminal, Windbg Preview, Nesbox, Minecraft, Minesweeper, Taki} from the Microsoft Store somehow
-
 # create a link to the `profile.cmd` file that runs when cmd starts
 # TODO: check if it already exists - fail if it exists and isn't our link, but pass if it is
 New-Item -ItemType SymbolicLink "~\profile.cmd" -Target "$PSScriptRoot\profile.cmd"
@@ -49,11 +47,8 @@ Invoke-WebRequest -UseBasicParsing https://chocolatey.org/install.ps1 | Invoke-E
 choco install -y .\chocolatey-packages.config
 
 # TODO: use `rustup` installed by scoop to install `rustc` and `cargo`
-
-# TODO: install Chrome (without scoop/chocolatey)
-# TODO: install VS Code (without scoop/chocolatey)
-# TODO: install Steam (without scoop/chocolatey)
-# TODO: install Discord (without scoop/chocolatey)
+# TODO: install {Ubuntu (WSL), Windows Terminal, Windbg Preview, Nesbox, Minecraft, Minesweeper, Taki} from the Microsoft Store somehow
+# TODO: install {Chrome, Edgium, VS Code, VS Code Insiders, Steam, Discord, Office, Zoom} (without scoop/chocolatey)
 
 # setup everything
 $PSScriptRoot\..\docker\install.ps1
