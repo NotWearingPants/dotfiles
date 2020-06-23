@@ -19,7 +19,6 @@ llvm
 neovim
 gitkraken
 dotnet-sdk
-wabt
 mongodb
 everything
 virtualbox-np
