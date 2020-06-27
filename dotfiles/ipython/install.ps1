@@ -1,6 +1,8 @@
 #requires -RunAsAdministrator
 
+Import-Module "$PSScriptRoot\..\..\scripts\utils.psm1"
+
 # create a link in the home directory to the `ipython_config.py` config file
-# TODO: check if it already exists - fail if it exists and isn't our link, but pass if it is
-# rm "~\.ipython\profile_default\ipython_config.py"
-New-Item -ItemType SymbolicLink "~\.ipython\profile_default\ipython_config.py" -Target "$PSScriptRoot\ipython_config.py"
+New-Symlink '~\.ipython\profile_default\ipython_config.py' "$PSScriptRoot\ipython_config.py"
+
+Remove-Module utils

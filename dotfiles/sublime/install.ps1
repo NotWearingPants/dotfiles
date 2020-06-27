@@ -1,12 +1,14 @@
 #requires -RunAsAdministrator
 
+Import-Module "$PSScriptRoot\..\..\scripts\utils.psm1"
+
 # sublime is installed via scoop, so the data directory is insie scoop's persist folder for sublime
 $sublimeDataDirectory = "~\scoop\persist\sublime-text\Data"
 
 # create a link in sublime's data folder to the settings file
-# TODO: check if it already exists - fail if it exists and isn't our link, but pass if it is
-# rm "$sublimeDataDirectory\Packages\User\Preferences.sublime-settings"
-New-Item -ItemType SymbolicLink "$sublimeDataDirectory\Packages\User\Preferences.sublime-settings" -Target "$PSScriptRoot\Preferences.sublime-settings"
+New-Symlink "$sublimeDataDirectory\Packages\User\Preferences.sublime-settings" "$PSScriptRoot\Preferences.sublime-settings"
 
 # also link the package control settings
-New-Item -ItemType SymbolicLink "$sublimeDataDirectory\Packages\User\Package Control.sublime-settings" -Target "$PSScriptRoot\Package Control.sublime-settings"
+New-Symlink "$sublimeDataDirectory\Packages\User\Package Control.sublime-settings" "$PSScriptRoot\Package Control.sublime-settings"
+
+Remove-Module utils

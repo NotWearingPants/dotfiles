@@ -1,5 +1,7 @@
 #requires -RunAsAdministrator
 
+Import-Module "$PSScriptRoot\..\..\scripts\utils.psm1"
+
 # change settings in registry
 reg import $PSScriptRoot\setup.reg
 
@@ -14,8 +16,7 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 # TODO: restart if needed
 
 # create a link to the `profile.cmd` file that runs when cmd starts
-# TODO: check if it already exists - fail if it exists and isn't our link, but pass if it is
-New-Item -ItemType SymbolicLink "~\profile.cmd" -Target "$PSScriptRoot\profile.cmd"
+New-Symlink "~\profile.cmd" "$PSScriptRoot\profile.cmd"
 
 # force tls1.2 for increased security before running powershell scripts from the web
 [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor [System.Net.SecurityProtocolType]::Tls12
@@ -59,3 +60,5 @@ $PSScriptRoot\..\powershell\install.ps1
 $PSScriptRoot\..\sublime\install.ps1
 $PSScriptRoot\..\vim\install.ps1
 $PSScriptRoot\..\vscode\install.ps1
+
+Remove-Module utils
