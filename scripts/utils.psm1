@@ -12,7 +12,7 @@ function New-Symlink {
 			throw "Tried to create a dotfile link ($linkLocation) but a different dotfile already exists"
 		}
 	} else {
-		New-Item -ItemType SymbolicLink "$linkLocation" -Target "$linkTarget" -ErrorAction Stop
+		New-Item -ItemType SymbolicLink "$linkLocation" -Target "$linkTarget" -ErrorAction Stop | Out-Null
 	}
 }
 
@@ -27,6 +27,6 @@ function New-Folder {
 			throw "Tried to create a directory ($location) but something else already exists there"
 		}
 	} else {
-		New-Item -ItemType Directory "$location" -ErrorAction Stop
+		New-Item -ItemType Directory "$location" -ErrorAction Stop | Out-Null
 	}
 }
