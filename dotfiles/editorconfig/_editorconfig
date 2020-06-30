@@ -1,0 +1,17 @@
+root = true
+
+[*]
+charset = utf-8
+indent_style = tab
+indent_size = 4
+end_of_line = lf
+trim_trailing_whitespace = true
+insert_final_newline = true
+max_line_length = 200
+
+[*.{json,yml,yaml}]
+indent_size = 2
+
+# CRLF is required in batch files
+[*.{bat,cmd}]
+end_of_line = crlf
