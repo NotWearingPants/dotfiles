@@ -1,5 +1,5 @@
 /**
- * @type {import("eslint").Linter.Config}
+ * @type {import("eslint").Linter.Config<import("eslint/rules/index").ESLintRules>}
  */
 module.exports = {
 	reportUnusedDisableDirectives: true,
