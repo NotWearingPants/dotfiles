@@ -3,6 +3,7 @@
  */
 module.exports = {
 	reportUnusedDisableDirectives: true,
+	extends: 'airbnb-base',
 	rules: {
 	},
 };
