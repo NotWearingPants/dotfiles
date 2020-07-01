@@ -8,6 +8,8 @@
         // Flash ActionScript looks a lot like JS, and the available
         // syntax highlighting extensions don't highlight everything
         "*.as": "javascript",
+
+        "*.gitconfig": "properties",
     },
 
     // TODO: depends on the screen

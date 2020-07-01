@@ -5,3 +5,27 @@
 
 [core]
 	autocrlf = false
+
+[alias]
+	a=add
+	unstage=reset HEAD --
+	r=restore
+	s=status
+	c=commit -m
+	cl=clone
+	i=init
+	d=diff
+	ds=diff --cached # diff staged
+	l=log
+	sh=show
+	b=switch # branch
+	nb=checkout -b # new branch
+	p=push
+	pl=pull
+	f=fetch --all
+	m=merge
+	st=stash
+	remotes=remote -v
+	change-origin=remote set-url origin
+	su=submodule update --init --recursive
+	ss=submodule sync
