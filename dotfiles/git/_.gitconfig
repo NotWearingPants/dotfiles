@@ -8,6 +8,7 @@
 
 [alias]
 	a=add
+	u=unstage
 	unstage=reset HEAD --
 	r=restore
 	s=status
