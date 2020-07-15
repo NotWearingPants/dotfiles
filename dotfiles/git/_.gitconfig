@@ -19,7 +19,7 @@
 	l=log
 	sh=show
 	b=switch # branch
-	nb=checkout -b # new branch
+	nb=switch -c # new branch
 	p=push
 	pl=pull
 	f=fetch --all
