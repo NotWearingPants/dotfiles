@@ -103,4 +103,5 @@ wheel
 
 # python2 backports
 pathlib2; python_version < '3'
+enum34; python_version < '3'
 subprocess32; python_version < '3'
