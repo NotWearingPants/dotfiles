@@ -8,8 +8,8 @@
 
 [alias]
 	a=add
-	u=unstage
 	unstage=reset HEAD --
+	u=unstage
 	r=restore
 	s=status
 	c=commit -m
@@ -27,6 +27,7 @@
 	m=merge
 	st=stash
 	remotes=remote -v
-	change-origin=remote set-url origin
+	set-origin=remote set-url origin
+	so=set-origin
 	su=submodule update --init --recursive
 	ss=submodule sync
