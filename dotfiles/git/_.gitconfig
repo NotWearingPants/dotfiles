@@ -15,7 +15,7 @@
 	cl=clone
 	i=init
 	d=diff
-	ds=diff --cached # diff staged
+	ds=diff --staged
 	l=log
 	sh=show
 	b=switch # branch
