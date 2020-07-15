@@ -44,6 +44,9 @@ pefile
 # parse ELF files
 pyelftools
 
+# git's filter-repo command
+git-filter-repo
+
 # parse and create PDF files
 pypdf4
 
