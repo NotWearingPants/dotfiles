@@ -56,6 +56,9 @@ docker
 openjdk
 
 # TODO: install Visual Studio Build Tools (for CL, Spy++, NMake, MSBuild)
+# TODO: install MSDN?
+
+# TODO: install source insight?
 
 # TODO: the android-sdk package appears to be a bit broken
 # find a way to make it work, or install the Android SDK, Android SDK Build Tools, and an emulator
