@@ -5,6 +5,18 @@ $versionMinor = $PSVersionTable.PSVersion.Minor
 $versionBits = if ([Environment]::Is64BitProcess) { 64 } else { 32 }
 # "PowerShell v$versionMajor.$versionMinor $($versionBits)bit | $env:USERNAME@$env:COMPUTERNAME"
 
+# set the prompt: `[time] user:cwd$ `
+function prompt {
+	$location = (Get-Location).Path.Replace($HOME, '~').Replace('C:', '').Replace('\', '/')
+	$time = Get-Date -Format 'HH:mm'
+
+	Write-Host -NoNewLine "[$time] "
+	Write-Host -NoNewLine -ForegroundColor Green "$($env:USERNAME)"
+	Write-Host -NoNewLine ":"
+	Write-Host -NoNewLine -ForegroundColor Yellow "$location"
+	"$ "
+}
+
 New-Alias which Get-Command
 
 # save the last result to $_
