@@ -55,6 +55,8 @@ docker
 # JDK + JRE
 openjdk
 
+ripgrep
+
 # TODO: install Visual Studio Build Tools (for CL, Spy++, NMake, MSBuild)
 # TODO: install MSDN?
 
