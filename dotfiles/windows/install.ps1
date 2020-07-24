@@ -48,6 +48,8 @@ Invoke-WebRequest -UseBasicParsing https://chocolatey.org/install.ps1 | Invoke-E
 choco install -y .\chocolatey-packages.config
 
 # TODO: use `rustup` installed by scoop to install `rustc` and `cargo`
+# TODO: `cargo install bat` - doesn't compile
+
 # TODO: install {Ubuntu (WSL), Windows Terminal, Windbg Preview, Nesbox, Minecraft, Minesweeper, Taki} from the Microsoft Store somehow
 # TODO: install {Chrome, Edgium, VS Code, VS Code Insiders, Steam, Discord, Office, Zoom} (without scoop/chocolatey)
 
