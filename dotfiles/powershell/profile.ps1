@@ -18,6 +18,7 @@ function prompt {
 }
 
 New-Alias which Get-Command
+New-Alias grep Select-String
 
 # save the last result to $_
 function Out-Default {
