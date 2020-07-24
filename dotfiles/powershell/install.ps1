@@ -6,4 +6,7 @@ Import-Module "$PSScriptRoot\..\..\scripts\utils.psm1"
 New-Folder '~\Documents\WindowsPowerShell'
 New-Symlink '~\Documents\WindowsPowerShell\profile.ps1' "$PSScriptRoot\profile.ps1"
 
+# download offline help
+Update-Help
+
 Remove-Module utils
