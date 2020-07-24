@@ -51,6 +51,11 @@ choco install -y .\chocolatey-packages.config
 # TODO: install {Ubuntu (WSL), Windows Terminal, Windbg Preview, Nesbox, Minecraft, Minesweeper, Taki} from the Microsoft Store somehow
 # TODO: install {Chrome, Edgium, VS Code, VS Code Insiders, Steam, Discord, Office, Zoom} (without scoop/chocolatey)
 
+# set windbg as the postmortem debugger
+# TODO: how do i set it for 32bit programs as well? do i need to install windbg 32bit or can it be set to the 64bit windbg manually in the registry?
+# TODO: maybe procdump instead?
+windbg -I
+
 # setup everything
 $PSScriptRoot\..\docker\install.ps1
 $PSScriptRoot\..\git\install.ps1
