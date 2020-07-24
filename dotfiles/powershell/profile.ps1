@@ -17,6 +17,10 @@ function prompt {
 	"$ "
 }
 
+# exit using Ctrl+D
+# NOTE: the `d` here must be lowercase
+Set-PSReadlineKeyHandler -Key Ctrl+d -Function ViExit
+
 New-Alias which Get-Command
 New-Alias grep Select-String
 
