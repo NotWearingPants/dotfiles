@@ -34,3 +34,4 @@
 	so=set-origin
 	su=submodule update --init --recursive
 	ss=submodule sync
+	chmodx=update-index --chmod=+x
