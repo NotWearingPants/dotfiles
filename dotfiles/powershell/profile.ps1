@@ -31,7 +31,8 @@ function Out-Default {
 }
 
 function paste {
-	Get-Clipboard | ForEach-Object { ">> $_" }
+	$continuationPrompt = (Get-PSReadLineOption).ContinuationPrompt
+	Get-Clipboard | ForEach-Object { "$continuationPrompt$_" }
 	Get-Clipboard | Out-String | Invoke-Expression
 }
 
