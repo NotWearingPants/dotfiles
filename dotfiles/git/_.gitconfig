@@ -24,6 +24,7 @@
 	b=switch # branch
 	nb=switch -c # new branch
 	p=push
+	pf=push --force
 	pl=pull
 	f=fetch --all
 	m=merge
