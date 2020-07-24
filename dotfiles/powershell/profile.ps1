@@ -18,6 +18,11 @@ function Out-Default {
 	}
 }
 
+function paste {
+	Get-Clipboard | ForEach-Object { ">> $_" }
+	Get-Clipboard | Out-String | Invoke-Expression
+}
+
 function prevtime {
 	$lastCommand = Get-History -Count 1
 	$time = $lastCommand.EndExecutionTime - $lastCommand.StartExecutionTime
