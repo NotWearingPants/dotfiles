@@ -1,5 +1,9 @@
 # TODO: this also outputs in non-login shells, make it stop
-# "Welcome"
+# print the powershell version and username and computer name
+$versionMajor = $PSVersionTable.PSVersion.Major
+$versionMinor = $PSVersionTable.PSVersion.Minor
+$versionBits = if ([Environment]::Is64BitProcess) { 64 } else { 32 }
+# "PowerShell v$versionMajor.$versionMinor $($versionBits)bit | $env:USERNAME@$env:COMPUTERNAME"
 
 New-Alias which Get-Command
 
