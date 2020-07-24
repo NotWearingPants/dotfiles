@@ -1,7 +1,6 @@
-[user]
-# TODO: get these values somehow
-#	name = ...
-#	email = ...
+# include another gitconfig file which should contain the user settings
+[include]
+	path = ~/.gitconfig-user
 
 [core]
 	autocrlf = false

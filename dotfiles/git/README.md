@@ -1,6 +1,13 @@
 # Git config & ignore
 
-## Easy ignore
+## Config
+
+Turns off auto-crlf, and adds a bunch of aliases.
+
+It also includes the file at `~/.gitconfig-user` if it exists.
+It should contain the user name & email config (and can contain any other machine-specific config).
+
+## Ignore
 
 All filenames beginning with a tilde (`~`) will be ignored by git. e.g. `~TODO.txt`
 
