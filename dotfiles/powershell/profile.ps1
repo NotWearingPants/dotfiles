@@ -13,3 +13,13 @@ function Out-Default {
 		$global:_ = $result
 	}
 }
+
+function prevtime {
+	$lastCommand = Get-History -Count 1
+	$time = $lastCommand.EndExecutionTime - $lastCommand.StartExecutionTime
+	'{0:mm\:ss\.fff}' -f $time
+}
+
+function publicip {
+	((Invoke-WebRequest https://api.ipify.org/?format=json).content | ConvertFrom-Json).IP
+}
