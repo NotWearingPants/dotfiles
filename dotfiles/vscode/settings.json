@@ -139,6 +139,8 @@
     // TODO: this doesn't work, chronicler doesn't understand `~`
     "chronicler.ffmpeg-binary": "~/scoop/shims/ffmpeg.exe",
 
+    // TODO: these only works for Docker Toolbox
+    // TODO: this doesn't work, the extension doesn't understand `~`
     "docker.certPath": "~/.docker/machine/machines/docker",
     // TODO: is this always the IP & port given by docker-machine?
     "docker.host": "tcp://192.168.99.100:2376",
