@@ -53,6 +53,8 @@ Windows Registry Editor Version 5.00
 ; TODO: get this somehow
 ;"_NT_SYMBOL_PATH"="src*...*..."
 
+"PYTHONSTARTUP"="%USERPROFILE%\\.pythonrc.py"
+
 ;; console host settings
 [HKEY_CURRENT_USER\Console]
 
