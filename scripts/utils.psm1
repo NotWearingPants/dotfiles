@@ -38,5 +38,5 @@ function Load-ListFile {
 		[String]$location
 	)
 
-	(Select-String '^[^#]' "$location").Line
+	Select-String -Pattern '^\s*([^#]+?)\s*(?:#|$)' -Path "$location" | ForEach-Object { $_.Matches.Groups[1].Value }
 }
