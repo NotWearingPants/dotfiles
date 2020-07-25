@@ -57,6 +57,9 @@ openjdk
 
 ripgrep
 
+# install ffmpeg for the VSCode screen recorder extension Chronicler
+ffmpeg
+
 # TODO: install Visual Studio Build Tools (for CL, Spy++, NMake, MSBuild)
 # TODO: install MSDN?
 

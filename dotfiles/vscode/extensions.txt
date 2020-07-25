@@ -90,6 +90,9 @@ janisdd.vscode-edit-csv
 # NOTE: this is a fork of `stephanvs.dot` that seems to be more updated
 EFanZh.graphviz-preview
 
+# record the vscode screen (video/gif)
+arcsine.chronicler
+
 # NPM package.json linter and NPM script runner
 eg2.vscode-npm-script
 

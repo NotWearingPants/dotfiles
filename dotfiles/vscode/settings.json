@@ -139,4 +139,8 @@
 
     // TODO: this only works for Windows
     "graphvizPreview.dotPath": "~/scoop/shims/dot.exe",
+
+    // TODO: this only works for Windows
+    // TODO: this doesn't work, chronicler doesn't understand `~`
+    "chronicler.ffmpeg-binary": "~/scoop/shims/ffmpeg.exe",
 }
