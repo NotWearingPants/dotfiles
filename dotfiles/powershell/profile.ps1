@@ -40,6 +40,12 @@ function Out-Default {
 function paste {
 	$continuationPrompt = (Get-PSReadLineOption).ContinuationPrompt
 	Get-Clipboard | ForEach-Object { "$continuationPrompt$_" }
+
+	# TODO: any variables/functions declared inside will be scoped to this function instead of globally
+	# maybe use `$script = [ScriptBlock]::Create((Get-Clipboard))` and then modify its AST -
+	#   $script.Ast.FindAll({ $args[0] -is [System.Management.Automation.Language.VariableExpressionAst] }, $true)
+	#   https://powershell.org/forums/topic/variables-losing-value-in-a-scriptblock-when-passed-to-a-function/
+	# or maybe use `Get-Variable -Scope Local` and `Get-ChildItem function:`, and diff them before and after, and copy the results to the global scope
 	Get-Clipboard | Out-String | Invoke-Expression
 }
 
