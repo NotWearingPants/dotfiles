@@ -143,4 +143,8 @@
     // TODO: this only works for Windows
     // TODO: this doesn't work, chronicler doesn't understand `~`
     "chronicler.ffmpeg-binary": "~/scoop/shims/ffmpeg.exe",
+
+    "docker.certPath": "~/.docker/machine/machines/docker",
+    // TODO: is this always the IP & port given by docker-machine?
+    "docker.host": "tcp://192.168.99.100:2376",
 }
