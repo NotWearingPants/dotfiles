@@ -24,17 +24,18 @@
     "workbench.startupEditor": "none",
 
     "editor.fontSize": 14,
+    "editor.insertSpaces": false, // indent using tabs
     "editor.minimap.enabled": false,
     "editor.dragAndDrop": false,
     "editor.cursorSmoothCaretAnimation": true,
 
-    "terminal.integrated.shell.windows": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
+    "terminal.integrated.shell.windows": "C:/Program Files/PowerShell/7/pwsh.exe",
     "terminal.integrated.rendererType": "canvas",
     "terminal.integrated.scrollback": 9999,
     "terminal.integrated.confirmOnExit": true,
     // be able to use Ctrl+B to toggle the sidebar when the terminal is focused
     "terminal.integrated.commandsToSkipShell": [
-        "workbench.action.toggleSidebarVisibility"
+        "workbench.action.toggleSidebarVisibility",
     ],
 
     // this is the "do not ask me again" checkbox when dragging and dropping to move files in the explorer on the left
@@ -84,8 +85,8 @@
         // show the regex of a valid name in naming warnings
         "--include-naming-hint=y",
 
-        // default is 100 but 120 fits the screen size
-        "--max-line-length=120"
+        // default is 100 but 200 fits the screen size
+        "--max-line-length=200"
     ],
 
     "gitlens.keymap": "chorded",
@@ -124,6 +125,7 @@
 
     "java.autobuild.enabled": false,
     "java.configuration.checkProjectSettingsExclusions": false,
+    "java.errors.incompleteClasspath.severity": "ignore",
 
     "rust.rustup": {
         // TODO: should differ between platforms
@@ -135,5 +137,6 @@
         "useRustfmt": true,
     },
 
-    // "graphvizPreview.dotPath": "...", // TODO: add this somehow, and have it differ between platforms
+    // TODO: this only works for Windows
+    "graphvizPreview.dotPath": "~/scoop/shims/dot.exe",
 }
