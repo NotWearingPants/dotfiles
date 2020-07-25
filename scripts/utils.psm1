@@ -1,5 +1,3 @@
-#requires -RunAsAdministrator
-
 function New-Symlink {
 	param (
 		[String]$linkLocation,
@@ -33,4 +31,12 @@ function New-Folder {
 		New-Item -ItemType Directory "$location" -ErrorAction Stop | Out-Null
 		Write-Output "Created a folder at {$location}"
 	}
+}
+
+function Load-ListFile {
+	param (
+		[String]$location
+	)
+
+	(Select-String '^[^#]' "$location").Line
 }

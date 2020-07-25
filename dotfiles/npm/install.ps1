@@ -1,3 +1,5 @@
+Import-Module "$PSScriptRoot\..\..\scripts\utils.psm1"
+
 function Install-NPMPackages {
     $packagesToInstall = $args[0]
 
@@ -8,8 +10,10 @@ function Install-NPMPackages {
     'Finished installing all packages.'    
 }
 
-$packagesToInstall = (Select-String '^[^#]' "$PSScriptRoot\packages.txt").Line
+$packagesToInstall = Load-ListFile "$PSScriptRoot\packages.txt"
 Install-NPMPackages $packagesToInstall
 
 # setup eslint
 . "$PSScriptRoot\..\eslint\install.ps1"
+
+Remove-Module utils

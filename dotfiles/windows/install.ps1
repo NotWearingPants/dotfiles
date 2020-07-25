@@ -37,7 +37,7 @@ New-Folder '~\scoop\buckets\local'
 New-Symlink '~\scoop\buckets\local\bucket' "$PSScriptRoot\scoop-packages"
 
 # install scoop packages
-$scoopPackagesToInstall = (Select-String '^[^#]' "$PSScriptRoot\scoop-packages.txt").Line
+$scoopPackagesToInstall = Load-ListFile "$PSScriptRoot\scoop-packages.txt"
 scoop install $scoopPackagesToInstall
 
 # install chocolatey

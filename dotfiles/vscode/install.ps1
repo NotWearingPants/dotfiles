@@ -1,3 +1,5 @@
+Import-Module "$PSScriptRoot\..\..\scripts\utils.psm1"
+
 function Install-VSCodeExtensions {
     $extensionsToInstall = $args[0]
 
@@ -17,7 +19,7 @@ function Get-VSCodeExtensions {
 }
 
 
-$extensionsToInstall = (Select-String '^[^#]' "$PSScriptRoot\extensions.txt").Line
+$extensionsToInstall = Load-ListFile "$PSScriptRoot\extensions.txt"
 
 $installedExtensions = Get-VSCodeExtensions
 $additionalExtensions = $installedExtensions | Where-Object { $extensionsToInstall -notcontains $_ }
@@ -26,3 +28,5 @@ $additionalExtensions = $installedExtensions | Where-Object { $extensionsToInsta
 $additionalExtensions | ForEach-Object { "`t$_" }
 
 Install-VSCodeExtensions $extensionsToInstall
+
+Remove-Module utils
