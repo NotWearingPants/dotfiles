@@ -14,7 +14,9 @@
 	"persist": [
 		"010 Templates",
 		"010 Scripts",
-		"AppData/Config"
+		"AppData/Config",
+		"AppData/Data",
+		"AppData/Temp"
 	],
 	"bin": [
 		[
