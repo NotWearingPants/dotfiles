@@ -18,14 +18,14 @@ function Get-VSCodeExtensions {
     return $installedExtensions
 }
 
+# create links in AppData to the settings and keybindings
+New-Symlink "$env:APPDATA\Code\User\settings.json" "$PSScriptRoot\settings.json"
+New-Symlink "$env:APPDATA\Code\User\keybindings.json" "$PSScriptRoot\keybindings.json"
 
 $extensionsToInstall = Load-ListFile "$PSScriptRoot\extensions.txt"
 
-$installedExtensions = Get-VSCodeExtensions
-$additionalExtensions = $installedExtensions | Where-Object { $extensionsToInstall -notcontains $_ }
-
 'Extensions installed separately:'
-$additionalExtensions | ForEach-Object { "`t$_" }
+Get-VSCodeExtensions | Where-Object { $extensionsToInstall -notcontains $_ } | ForEach-Object { "`t$_" }
 
 Install-VSCodeExtensions $extensionsToInstall
 
