@@ -144,4 +144,8 @@
     "docker.certPath": "~/.docker/machine/machines/docker",
     // TODO: is this always the IP & port given by docker-machine?
     "docker.host": "tcp://192.168.99.100:2376",
+
+    // vscode adds these automatically, so i have no choice
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 }
