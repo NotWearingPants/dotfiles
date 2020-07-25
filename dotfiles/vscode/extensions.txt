@@ -48,8 +48,11 @@ wayou.vscode-todo-highlight
 # TODO file tree
 gruntfuggly.todo-tree
 
-# hex viewer
-slevesque.vscode-hexdump
+# hex editor
+ms-vscode.hexeditor
+
+# remote development on SSH/WSL/Containers
+ms-vscode-remote.vscode-remote-extensionpack
 
 # vim emulator
 vscodevim.vim
@@ -121,6 +124,12 @@ GrapeCity.gc-excelviewer
 # display PDF files
 tomoki1207.pdf
 
+# support EditorConfig file settings
+EditorConfig.EditorConfig
+
+# select until character (like vim's `f` command)
+jakelucas.code-select-until
+
 
 #################
 ### LANGUAGES ###
@@ -133,7 +142,7 @@ ms-python.python
 ms-vscode.cpptools
 
 # C#
-ms-vscode.csharp
+ms-dotnettools.csharp
 
 # x86 assembly
 13xforever.language-x86-64-assembly
@@ -177,8 +186,20 @@ jock.svg
 # Graphviz (dot)
 joaompinto.vscode-graphviz
 
+# Vue
+octref.vetur
+
 # Linker Script
 ZixuanWang.linkerscript
 
 # Windows Registry Script (.reg)
 ionutvmi.reg
+
+# WebAssembly
+dtsvet.vscode-wasm
+
+# Protobuf
+zxh404.vscode-proto3
+
+# ActionScript
+bowlerhatllc.vscode-nextgenas
