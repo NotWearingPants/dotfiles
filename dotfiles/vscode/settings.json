@@ -28,7 +28,7 @@
     "editor.dragAndDrop": false,
     "editor.cursorSmoothCaretAnimation": true,
 
-    "terminal.integrated.shell.windows": "C:\\WINDOWS\\Sysnative\\cmd.exe",
+    "terminal.integrated.shell.windows": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
     "terminal.integrated.rendererType": "canvas",
     "terminal.integrated.scrollback": 9999,
     "terminal.integrated.confirmOnExit": true,
