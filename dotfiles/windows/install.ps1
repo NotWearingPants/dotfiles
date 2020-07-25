@@ -62,7 +62,7 @@ windbg -I
 . "$PSScriptRoot\..\docker\install.ps1"
 . "$PSScriptRoot\..\git\install.ps1"
 . "$PSScriptRoot\..\npm\install.ps1"
-. "$PSScriptRoot\..\pip\install.ps1"
+. "$PSScriptRoot\..\python\install.ps1"
 . "$PSScriptRoot\..\powershell\install.ps1"
 . "$PSScriptRoot\..\sublime\install.ps1"
 . "$PSScriptRoot\..\vim\install.ps1"

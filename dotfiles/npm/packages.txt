@@ -5,8 +5,10 @@ yarn
 # run command using local npm binaries
 npx
 
-# linter
+# js linter
 eslint
+# css linter
+stylelint
 
 # task runner
 gulp

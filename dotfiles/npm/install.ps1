@@ -13,7 +13,8 @@ function Install-NPMPackages {
 $packagesToInstall = Load-ListFile "$PSScriptRoot\packages.txt"
 Install-NPMPackages $packagesToInstall
 
-# setup eslint
+# setup packages that need more setup
 . "$PSScriptRoot\..\eslint\install.ps1"
+. "$PSScriptRoot\..\stylelint\install.ps1"
 
 Remove-Module utils
