@@ -1,10 +1,10 @@
 # print the powershell version and username and computer name
 # TODO: this also outputs in non-login shells, make it stop
 & {
-$versionMajor = $PSVersionTable.PSVersion.Major
-$versionMinor = $PSVersionTable.PSVersion.Minor
-$versionBits = if ([Environment]::Is64BitProcess) { 64 } else { 32 }
-# "PowerShell v$versionMajor.$versionMinor $($versionBits)bit | $env:USERNAME@$env:COMPUTERNAME"
+	$versionMajor = $PSVersionTable.PSVersion.Major
+	$versionMinor = $PSVersionTable.PSVersion.Minor
+	$versionBits = if ([Environment]::Is64BitProcess) { 64 } else { 32 }
+	# "PowerShell v$versionMajor.$versionMinor $($versionBits)bit | $env:USERNAME@$env:COMPUTERNAME"
 }
 
 # set the prompt: `[time] user:cwd$ `
@@ -57,4 +57,15 @@ function prevtime {
 
 function publicip {
 	((Invoke-WebRequest https://api.ipify.org/?format=json).content | ConvertFrom-Json).IP
+}
+
+function dockersetup {
+	$machineName = 'docker'
+	docker-machine start "$machineName"
+	docker-machine env "$machineName" --shell powershell | Invoke-Expression
+}
+
+function dockerssh {
+	$machineName = 'docker'
+	docker-machine ssh "$machineName"
 }
