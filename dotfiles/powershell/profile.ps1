@@ -69,3 +69,9 @@ function dockerssh {
 	$machineName = 'docker'
 	docker-machine ssh "$machineName"
 }
+
+# disable legacy `bash` command in favor of `wsl`,
+# because it opens `bash` regardless of the default shell configured
+function bash {
+	"No, run ``wsl``"
+}

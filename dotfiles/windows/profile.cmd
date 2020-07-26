@@ -1,7 +1,7 @@
 @echo off
 
-:: disable `bash` to force using `wsl` (to open the default shell instead)
-:: TODO: this only disables `bash` through cmd, not powershell or Win+R
+:: disable legacy `bash` command in favor of `wsl`,
+:: because it opens `bash` regardless of the default shell configured
 doskey bash=echo No, run `wsl`
 
 :: exit with ^D and Enter
