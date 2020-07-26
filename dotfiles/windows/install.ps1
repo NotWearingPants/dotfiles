@@ -67,5 +67,9 @@ windbg -I
 . "$PSScriptRoot\..\sublime\install.ps1"
 . "$PSScriptRoot\..\vim\install.ps1"
 . "$PSScriptRoot\..\vscode\install.ps1"
+. "$PSScriptRoot\..\ssh\install.ps1"
+. "$PSScriptRoot\..\mongodb\install.ps1"
+. "$PSScriptRoot\..\editorconfig\install.ps1"
+#. "$PSScriptRoot\..\hyper\install.ps1"
 
 Remove-Module utils

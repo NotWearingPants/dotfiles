@@ -7,4 +7,7 @@ New-Folder '~\.config\git\'
 New-Symlink '~\.config\git\ignore' "$PSScriptRoot\_.gitignore"
 New-Symlink '~\.config\git\config' "$PSScriptRoot\_.gitconfig"
 
+# setup bash for git bash
+. "$PSScriptRoot\..\bash\install.ps1"
+
 Remove-Module utils
