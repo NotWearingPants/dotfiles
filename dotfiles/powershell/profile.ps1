@@ -75,3 +75,5 @@ function dockerssh {
 function bash {
 	"No, run ``wsl``"
 }
+
+# TODO: use https://github.com/mikebattista/PowerShell-WSL-Interop#usage
