@@ -22,7 +22,7 @@ New-Symlink '~\profile.cmd' "$PSScriptRoot\profile.cmd"
 [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor [System.Net.SecurityProtocolType]::Tls12
 
 # install scoop
-Invoke-WebRequest -UseBasicParsing 'https://get.scoop.sh/' | Invoke-Expression
+Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/ScoopInstaller/Install/master/install.ps1' | Invoke-Expression
 # TOOD: we might need to reload the PATH here before we use scoop
 
 # add additional buckets to scoop
