@@ -1,0 +1,28 @@
+{
+	"$schema": "https://raw.githubusercontent.com/lukesampson/scoop/master/schema.json",
+	"version": "6.0",
+	"homepage": "https://boltbait.com/pdn/CodeLab/",
+	"description": "CodeLab Plugin for paint.net",
+	"depends": "paint.net",
+	"url": "https://boltbait.com/pdn/CodeLab/CodeLabInstaller600.zip",
+	"hash": "929129af358e725c87f7646d22568a510a947285f6a5ee07f02c5888ccdb28b8",
+	"installer": {
+		"script": [
+			"$installerAssembly = [System.Reflection.Assembly]::Load([IO.File]::ReadAllBytes(\"$dir\\InstallCodeLab.exe\"))",
+			"Remove-Item \"$dir\\InstallCodeLab.exe\"",
+			"$pluginsFileNames = $installerAssembly.GetManifestResourceNames() | Where-Object { $_.EndsWith('.dll') } | ForEach-Object { $_.Replace('Install.Attachments.', '') }",
+			"$pluginsFileNames | ForEach-Object {",
+			"    $installerAssembly.GetManifestResourceStream('Install.Attachments.' + $_).",
+			"        CopyTo([IO.File]::OpenWrite(",
+			"            \"$(appdir paint.net)\\current\\Effects\\$_\"",
+			"        ))",
+			"}",
+			"$pluginsFileNames | Out-File \"$dir\\plugins.txt\""
+		]
+	},
+	"uninstaller": {
+		"script": [
+			"Get-Content \"$dir\\plugins.txt\" | ForEach-Object { Remove-Item \"$(appdir paint.net)\\current\\Effects\\$_\" }"
+		]
+	}
+}
