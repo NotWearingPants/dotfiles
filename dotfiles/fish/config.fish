@@ -9,3 +9,7 @@ alias lll='ls -lA --group-directories-first'
 
 # for x server programs
 set --export DISPLAY :0
+
+# wasmtime env-vars
+set -gx WASMTIME_HOME "$HOME/.wasmtime"
+set -gx PATH "$WASMTIME_HOME/bin" $PATH
