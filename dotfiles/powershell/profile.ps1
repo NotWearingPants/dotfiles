@@ -9,11 +9,15 @@
 
 # set the prompt: `[time] user:cwd$ `
 function prompt {
-	$location = (Get-Location).Path.Replace($HOME, '~').Replace('C:', '').Replace('\', '/')
 	$time = Get-Date -Format 'HH:mm'
+	$username = if ($IsWindows) { $env:USERNAME } else { $env:USER }
+	$location = (Get-Location).Path.Replace($HOME, '~')
+	if ($IsWindows) {
+		$location = $location.Replace('C:', '').Replace('\', '/')
+	}
 
 	Write-Host -NoNewLine "[$time] "
-	Write-Host -NoNewLine -ForegroundColor Green "$($env:USERNAME)"
+	Write-Host -NoNewLine -ForegroundColor Green "$username"
 	Write-Host -NoNewLine ":"
 	Write-Host -NoNewLine -ForegroundColor Yellow "$location"
 	"$ "
