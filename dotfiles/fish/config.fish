@@ -3,11 +3,9 @@
 #set --export PATH ... $PATH
 
 # aliases for `ls`
-alias l='ls -lah'
-alias la='ls -lAh'
-alias ll='ls -lh'
-alias ls='ls -G'
-alias lsa='ls -lah'
+alias l='ls -A --group-directories-first'
+alias ll='ls -lAh --group-directories-first'
+alias lll='ls -lA --group-directories-first'
 
 # for x server programs
 set --export DISPLAY :0
