@@ -5,6 +5,8 @@ Import-Module "$PSScriptRoot\..\..\scripts\utils.psm1"
 # change settings in registry
 reg import $PSScriptRoot\setup.reg
 
+# TODO: disable sticky keys
+
 # enable the telnet command
 # TODO: check if the feature is already enabled, and skip this
 Enable-WindowsOptionalFeature -Online -FeatureName TelnetClient
