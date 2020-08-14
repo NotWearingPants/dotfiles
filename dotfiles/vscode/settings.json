@@ -51,6 +51,8 @@
     ////////// EXTENSIONS //////////
     ////////////////////////////////
 
+    "python.showStartPage": false,
+
     // use python 3 from scoop
     // TODO: this only works for Windows
     "python.pythonPath": "~/scoop/shims/python.exe",
