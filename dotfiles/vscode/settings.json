@@ -6,17 +6,20 @@
     "files.eol": "\n",
     "files.associations": {
     },
-
-    // TODO: depends on the screen
-    "window.zoomLevel": 0,
+    "files.exclude": {
+        "**/__pycache__": true
+    },
+    // "files.simpleDialog.enable": true,
 
     "window.restoreWindows": "all",
     "window.doubleClickIconToClose": true,
-    // "window.menuBarVisibility": "toggle",
-
-    "workbench.colorTheme": "Default Dark+",
-    // "workbench.colorTheme": "Monokai",
+    "workbench.colorTheme": "Monokai",
     "workbench.startupEditor": "none",
+    "workbench.editor.untitled.hint": "hidden",
+    "window.dialogStyle": "custom",
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
 
     "editor.fontSize": 14,
     "editor.insertSpaces": false, // indent using tabs
@@ -26,6 +29,7 @@
 
     "terminal.integrated.shell.windows": "C:/Program Files/PowerShell/7/pwsh.exe",
     "terminal.integrated.rendererType": "canvas",
+    "terminal.integrated.tabs.enabled": true,
     "terminal.integrated.scrollback": 9999,
     "terminal.integrated.confirmOnExit": true,
     // be able to use Ctrl+B to toggle the sidebar when the terminal is focused
@@ -38,11 +42,18 @@
     "explorer.confirmDragAndDrop": true,
 
     "debug.toolBarLocation": "docked",
+    "debug.allowBreakpointsEverywhere": true,
+    "task.saveBeforeRun": "never",
+
+    "notebook.cellToolbarLocation": {
+        "default": "right"
+    },
 
     "git.autofetch": true,
     // this is the "always" button when committing without any staged stuff
     // i want to disable the "always" button and only leave "yes" and "cancel", but it doesn't seem to affect anything
     "git.enableSmartCommit": false,
+    "git.ignoreWindowsGit27Warning": true,
 
     "javascript.updateImportsOnFileMove.enabled": "always",
 
@@ -52,10 +63,11 @@
     ////////////////////////////////
 
     "python.showStartPage": false,
-
+    "python.languageServer": "Pylance",
     // use python 3 from scoop
     // TODO: this only works for Windows
     "python.pythonPath": "~/scoop/shims/python.exe",
+    "python.defaultInterpreterPath": "~/scoop/shims/python.exe",
 
     // "python.pythonPath": "...", // TODO: add this somehow, and have it differ between platforms
     "python.linting.pylintArgs": [
@@ -94,7 +106,21 @@
     },
 
     "cSpell.userWords": [
-        // TODO: add extra dictionary words
+        "untradeable",
+        "avoidability",
+        "draggable",
+        "attackable",
+        "unequip", "equippable", "unequippable",
+        "prepend",
+        "struct", "structs",
+        "dword", "dwords",
+        "syscall", "syscalls",
+        "decompile", "decompiler", "decompiled",
+        "bruteforce", "bruteforcer", "bruteforced",
+        "prctl", "execve", "mmap", "fopen", "fread", "fwrite",
+        "shellcode", "shellcodes",
+        "checksec",
+        "ASLR", "DEP", "NX", "PIE", "PIC", "ELF", "PE",
     ],
 
     "todohighlight.keywords": [
@@ -123,6 +149,7 @@
     "java.autobuild.enabled": false,
     "java.configuration.checkProjectSettingsExclusions": false,
     "java.errors.incompleteClasspath.severity": "ignore",
+    "java.semanticHighlighting.enabled": true,
 
     "rust.rustup": {
         // TODO: should differ between platforms
@@ -141,11 +168,15 @@
     // TODO: this doesn't work, chronicler doesn't understand `~`
     "chronicler.ffmpeg-binary": "~/scoop/shims/ffmpeg.exe",
 
-    // TODO: these only works for Docker Toolbox
+    // TODO: these only work for Docker Toolbox
     // TODO: this doesn't work, the extension doesn't understand `~`
     "docker.certPath": "~/.docker/machine/machines/docker",
     // TODO: is this always the IP & port given by docker-machine?
     "docker.host": "tcp://192.168.99.100:2376",
+
+    "latex-workshop.view.pdf.viewer": "tab",
+
+    "trailing-spaces.highlightCurrentLine": false,
 
     // vscode adds these automatically, so i have no choice
     "editor.suggestSelection": "first",
