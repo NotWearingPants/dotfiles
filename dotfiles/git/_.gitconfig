@@ -5,14 +5,21 @@
 [core]
 	autocrlf = false
 
+[push]
+	# avoid setting upstream everytime
+	default = current
+
 [alias]
 	h=help
 	a=add
+	aa=add . # add all
 	unstage=reset HEAD --
 	u=unstage
-	r=restore
+	rs=restore
 	s=status
 	c=commit -m
+	ca=commit --amend
+	c1=commit -m "Initial commit" --allow-empty
 	cl=clone
 	cls=clone --recurse-submodules # clone with submodules
 	download=clone --depth 1
@@ -20,18 +27,28 @@
 	d=diff
 	ds=diff --staged
 	l=log
+	r=reset
+	rh=reset --hard
+	rss=reset --soft
 	sh=show
 	b=switch # branch
 	nb=switch -c # new branch
+	back=switch -
+	bk=back
 	p=push
 	pf=push --force
 	pl=pull
 	f=fetch --all
 	m=merge
+	rv=revert
+	cp=cherry-pick
 	st=stash
 	remotes=remote -v
+	rms=remotes
 	set-origin=remote set-url origin
 	so=set-origin
 	su=submodule update --init --recursive
 	ss=submodule sync
+	clean-new=clean -fd # cleans untracked files, doesn't affect ignored files
+	clean-ignored=clean -fdx # cleans untracked files including ignored files
 	chmodx=update-index --chmod=+x
