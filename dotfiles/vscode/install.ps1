@@ -22,6 +22,9 @@ function Get-VSCodeExtensions {
 New-Symlink "$env:APPDATA\Code\User\settings.json" "$PSScriptRoot\settings.json"
 New-Symlink "$env:APPDATA\Code\User\keybindings.json" "$PSScriptRoot\keybindings.json"
 
+# create a link in home to the .jsbeautifyrc settings file for the Beautify extension
+New-Symlink '~\.jsbeautifyrc' "$PSScriptRoot\_.jsbeautifyrc"
+
 $extensionsToInstall = Load-ListFile "$PSScriptRoot\extensions.txt"
 
 'Extensions installed separately:'
