@@ -55,6 +55,8 @@ choco install -y '.\chocolatey-packages.config'
 # TODO: install {Ubuntu (WSL), Windows Terminal, Windbg Preview, Nesbox, Minecraft, Minesweeper, Taki} from the Microsoft Store somehow
 # TODO: install {Chrome, Edgium, VS Code, VS Code Insiders, Steam, Discord, Office, Zoom} (without scoop/chocolatey)
 
+# TODO: get all installed apps using https://stackoverflow.com/questions/16452540/registry-path-to-find-all-the-installed-applications/62544878 and warn about those installed from outside of this script
+
 # set windbg as the postmortem debugger
 # TODO: how do i set it for 32bit programs as well? do i need to install windbg 32bit or can it be set to the 64bit windbg manually in the registry?
 # TODO: maybe procdump instead?
