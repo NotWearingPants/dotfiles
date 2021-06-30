@@ -1,184 +1,184 @@
 {
-    ////////////////////////////////
-    //////////   VSCODE   //////////
-    ////////////////////////////////
+	////////////////////////////////
+	//////////   VSCODE   //////////
+	////////////////////////////////
 
-    "files.eol": "\n",
-    "files.associations": {
-    },
-    "files.exclude": {
-        "**/__pycache__": true
-    },
-    // "files.simpleDialog.enable": true,
+	"files.eol": "\n",
+	"files.associations": {
+	},
+	"files.exclude": {
+		"**/__pycache__": true
+	},
+	// "files.simpleDialog.enable": true,
 
-    "window.restoreWindows": "all",
-    "window.doubleClickIconToClose": true,
-    "workbench.colorTheme": "Monokai",
-    "workbench.startupEditor": "none",
-    "workbench.editor.untitled.hint": "hidden",
-    "window.dialogStyle": "custom",
-    "workbench.editorAssociations": {
-        "*.ipynb": "jupyter.notebook.ipynb"
-    },
+	"window.restoreWindows": "all",
+	"window.doubleClickIconToClose": true,
+	"workbench.colorTheme": "Monokai",
+	"workbench.startupEditor": "none",
+	"workbench.editor.untitled.hint": "hidden",
+	"window.dialogStyle": "custom",
+	"workbench.editorAssociations": {
+		"*.ipynb": "jupyter.notebook.ipynb"
+	},
 
-    "editor.fontSize": 14,
-    "editor.insertSpaces": false, // indent using tabs
-    "editor.minimap.enabled": false,
-    "editor.dragAndDrop": false,
-    "editor.cursorSmoothCaretAnimation": true,
+	"editor.fontSize": 14,
+	"editor.insertSpaces": false, // indent using tabs
+	"editor.minimap.enabled": false,
+	"editor.dragAndDrop": false,
+	"editor.cursorSmoothCaretAnimation": true,
 
-    "terminal.integrated.shell.windows": "C:/Program Files/PowerShell/7/pwsh.exe",
-    "terminal.integrated.rendererType": "canvas",
-    "terminal.integrated.tabs.enabled": true,
-    "terminal.integrated.scrollback": 9999,
-    "terminal.integrated.confirmOnExit": true,
-    // be able to use Ctrl+B to toggle the sidebar when the terminal is focused
-    "terminal.integrated.commandsToSkipShell": [
-        "workbench.action.toggleSidebarVisibility",
-    ],
+	"terminal.integrated.shell.windows": "C:/Program Files/PowerShell/7/pwsh.exe",
+	"terminal.integrated.rendererType": "canvas",
+	"terminal.integrated.tabs.enabled": true,
+	"terminal.integrated.scrollback": 9999,
+	"terminal.integrated.confirmOnExit": true,
+	// be able to use Ctrl+B to toggle the sidebar when the terminal is focused
+	"terminal.integrated.commandsToSkipShell": [
+		"workbench.action.toggleSidebarVisibility",
+	],
 
-    // this is the "do not ask me again" checkbox when dragging and dropping to move files in the explorer on the left
-    // i want to disable the checkbox and only leave "move" and "cancel", but it doesn't seem to affect anything
-    "explorer.confirmDragAndDrop": true,
+	// this is the "do not ask me again" checkbox when dragging and dropping to move files in the explorer on the left
+	// i want to disable the checkbox and only leave "move" and "cancel", but it doesn't seem to affect anything
+	"explorer.confirmDragAndDrop": true,
 
-    "debug.toolBarLocation": "docked",
-    "debug.allowBreakpointsEverywhere": true,
-    "task.saveBeforeRun": "never",
+	"debug.toolBarLocation": "docked",
+	"debug.allowBreakpointsEverywhere": true,
+	"task.saveBeforeRun": "never",
 
-    "notebook.cellToolbarLocation": {
-        "default": "right"
-    },
+	"notebook.cellToolbarLocation": {
+		"default": "right"
+	},
 
-    "git.autofetch": true,
-    // this is the "always" button when committing without any staged stuff
-    // i want to disable the "always" button and only leave "yes" and "cancel", but it doesn't seem to affect anything
-    "git.enableSmartCommit": false,
-    "git.ignoreWindowsGit27Warning": true,
+	"git.autofetch": true,
+	// this is the "always" button when committing without any staged stuff
+	// i want to disable the "always" button and only leave "yes" and "cancel", but it doesn't seem to affect anything
+	"git.enableSmartCommit": false,
+	"git.ignoreWindowsGit27Warning": true,
 
-    "javascript.updateImportsOnFileMove.enabled": "always",
+	"javascript.updateImportsOnFileMove.enabled": "always",
 
 
-    ////////////////////////////////
-    ////////// EXTENSIONS //////////
-    ////////////////////////////////
+	////////////////////////////////
+	////////// EXTENSIONS //////////
+	////////////////////////////////
 
-    "python.showStartPage": false,
-    "python.languageServer": "Pylance",
-    // use python 3 from scoop
-    // TODO: this only works for Windows
-    "python.pythonPath": "~/scoop/shims/python.exe",
-    "python.defaultInterpreterPath": "~/scoop/shims/python.exe",
+	"python.showStartPage": false,
+	"python.languageServer": "Pylance",
+	// use python 3 from scoop
+	// TODO: this only works for Windows
+	"python.pythonPath": "~/scoop/shims/python.exe",
+	"python.defaultInterpreterPath": "~/scoop/shims/python.exe",
 
-    // "python.pythonPath": "...", // TODO: add this somehow, and have it differ between platforms
-    "python.linting.pylintArgs": [
-        // disable docstring missing messages
-        "--disable=C0111",
+	// "python.pythonPath": "...", // TODO: add this somehow, and have it differ between platforms
+	"python.linting.pylintArgs": [
+		// disable docstring missing messages
+		"--disable=C0111",
 
-        // NOTE: see pylint's docs about C0103
+		// NOTE: see pylint's docs about C0103
 
-        // allow global non-const variables
-        // this is --const-rgx=const-rgx|variable-rgx with the 30 char limit removed
-        "--const-rgx=(([A-Z_][A-Z0-9_]*)|(__.*__))$|[a-z_][a-z0-9_]{2,}$",
+		// allow global non-const variables
+		// this is --const-rgx=const-rgx|variable-rgx with the 30 char limit removed
+		"--const-rgx=(([A-Z_][A-Z0-9_]*)|(__.*__))$|[a-z_][a-z0-9_]{2,}$",
 
-        // allow non-global consts
-        // this is --variable-rgx=const-rgx|variable-rgx with the 30 char limit removed
-        "--variable-rgx=(([A-Z_][A-Z0-9_]*)|(__.*__))$|[a-z_][a-z0-9_]{2,}$",
+		// allow non-global consts
+		// this is --variable-rgx=const-rgx|variable-rgx with the 30 char limit removed
+		"--variable-rgx=(([A-Z_][A-Z0-9_]*)|(__.*__))$|[a-z_][a-z0-9_]{2,}$",
 
-        // remove the 30 char limit from the other types
-        // this is the default function-rgx/method-rgx/argument-rgx/attribute-rgx with the 30 char limit removed
-        "--function-rgx=[a-z_][a-z0-9_]{2,}$",
-        "--method-rgx=[a-z_][a-z0-9_]{2,}$",
-        "--argument-rgx=[a-z_][a-z0-9_]{2,}$",
-        "--attribute-rgx=[a-z_][a-z0-9_]{2,}$",
+		// remove the 30 char limit from the other types
+		// this is the default function-rgx/method-rgx/argument-rgx/attribute-rgx with the 30 char limit removed
+		"--function-rgx=[a-z_][a-z0-9_]{2,}$",
+		"--method-rgx=[a-z_][a-z0-9_]{2,}$",
+		"--argument-rgx=[a-z_][a-z0-9_]{2,}$",
+		"--attribute-rgx=[a-z_][a-z0-9_]{2,}$",
 
-        // show the regex of a valid name in naming warnings
-        "--include-naming-hint=y",
+		// show the regex of a valid name in naming warnings
+		"--include-naming-hint=y",
 
-        // default is 100 but 200 fits the screen size
-        "--max-line-length=200"
-    ],
+		// default is 100 but 200 fits the screen size
+		"--max-line-length=200"
+	],
 
-    "gitlens.keymap": "chorded",
-    "gitlens.advanced.messages": {
-        // TODO: are these still necessary?
-        "suppressShowKeyBindingsNotice": true,
-        "suppressResultsExplorerNotice": true,
-    },
+	"gitlens.keymap": "chorded",
+	"gitlens.advanced.messages": {
+		// TODO: are these still necessary?
+		"suppressShowKeyBindingsNotice": true,
+		"suppressResultsExplorerNotice": true,
+	},
 
-    "cSpell.userWords": [
-        "untradeable",
-        "avoidability",
-        "draggable",
-        "attackable",
-        "unequip", "equippable", "unequippable",
-        "prepend",
-        "struct", "structs",
-        "dword", "dwords",
-        "syscall", "syscalls",
-        "decompile", "decompiler", "decompiled",
-        "bruteforce", "bruteforcer", "bruteforced",
-        "prctl", "execve", "mmap", "fopen", "fread", "fwrite",
-        "shellcode", "shellcodes",
-        "checksec",
-        "ASLR", "DEP", "NX", "PIE", "PIC", "ELF", "PE",
-    ],
+	"cSpell.userWords": [
+		"untradeable",
+		"avoidability",
+		"draggable",
+		"attackable",
+		"unequip", "equippable", "unequippable",
+		"prepend",
+		"struct", "structs",
+		"dword", "dwords",
+		"syscall", "syscalls",
+		"decompile", "decompiler", "decompiled",
+		"bruteforce", "bruteforcer", "bruteforced",
+		"prctl", "execve", "mmap", "fopen", "fread", "fwrite",
+		"shellcode", "shellcodes",
+		"checksec",
+		"ASLR", "DEP", "NX", "PIE", "PIC", "ELF", "PE",
+	],
 
-    "todohighlight.keywords": [
-        {
-            "text": "TODO:",
-            "backgroundColor": "rgba(0, 255, 0, 0.1)",
-            "color": "",
-            "overviewRulerColor": "orange",
-        },
-        {
-            "text": "NOTE:",
-            "backgroundColor": "rgba(100, 50, 150, 0.5)",
-            "color": "",
-            "overviewRulerColor": "rebeccapurple",
-        },
-    ],
+	"todohighlight.keywords": [
+		{
+			"text": "TODO:",
+			"backgroundColor": "rgba(0, 255, 0, 0.1)",
+			"color": "",
+			"overviewRulerColor": "orange",
+		},
+		{
+			"text": "NOTE:",
+			"backgroundColor": "rgba(100, 50, 150, 0.5)",
+			"color": "",
+			"overviewRulerColor": "rebeccapurple",
+		},
+	],
 
-    "eslint.enable": false,
+	"eslint.enable": false,
 
-    "vim.easymotion": true,
-    "vim.hlsearch": true,
-    "vim.normalModeKeyBindings": [
-        { "before": [";"], "after": [":"] },
-    ],
+	"vim.easymotion": true,
+	"vim.hlsearch": true,
+	"vim.normalModeKeyBindings": [
+		{ "before": [";"], "after": [":"] },
+	],
 
-    "java.autobuild.enabled": false,
-    "java.configuration.checkProjectSettingsExclusions": false,
-    "java.errors.incompleteClasspath.severity": "ignore",
-    "java.semanticHighlighting.enabled": true,
+	"java.autobuild.enabled": false,
+	"java.configuration.checkProjectSettingsExclusions": false,
+	"java.errors.incompleteClasspath.severity": "ignore",
+	"java.semanticHighlighting.enabled": true,
 
-    "rust.rustup": {
-        // TODO: should differ between platforms
-        "toolchain": "stable-x86_64-pc-windows-msvc",
-        "nightlyToolchain": "nightly-x86_64-pc-windows-msvc"
-    },
-    "rust.mode": "rls",
-    "rust.rls": {
-        "useRustfmt": true,
-    },
+	"rust.rustup": {
+		// TODO: should differ between platforms
+		"toolchain": "stable-x86_64-pc-windows-msvc",
+		"nightlyToolchain": "nightly-x86_64-pc-windows-msvc"
+	},
+	"rust.mode": "rls",
+	"rust.rls": {
+		"useRustfmt": true,
+	},
 
-    // TODO: this only works for Windows
-    "graphvizPreview.dotPath": "~/scoop/shims/dot.exe",
+	// TODO: this only works for Windows
+	"graphvizPreview.dotPath": "~/scoop/shims/dot.exe",
 
-    // TODO: this only works for Windows
-    // TODO: this doesn't work, chronicler doesn't understand `~`
-    "chronicler.ffmpeg-binary": "~/scoop/shims/ffmpeg.exe",
+	// TODO: this only works for Windows
+	// TODO: this doesn't work, chronicler doesn't understand `~`
+	"chronicler.ffmpeg-binary": "~/scoop/shims/ffmpeg.exe",
 
-    // TODO: these only work for Docker Toolbox
-    // TODO: this doesn't work, the extension doesn't understand `~`
-    "docker.certPath": "~/.docker/machine/machines/docker",
-    // TODO: is this always the IP & port given by docker-machine?
-    "docker.host": "tcp://192.168.99.100:2376",
+	// TODO: these only work for Docker Toolbox
+	// TODO: this doesn't work, the extension doesn't understand `~`
+	"docker.certPath": "~/.docker/machine/machines/docker",
+	// TODO: is this always the IP & port given by docker-machine?
+	"docker.host": "tcp://192.168.99.100:2376",
 
-    "latex-workshop.view.pdf.viewer": "tab",
+	"latex-workshop.view.pdf.viewer": "tab",
 
-    "trailing-spaces.highlightCurrentLine": false,
+	"trailing-spaces.highlightCurrentLine": false,
 
-    // vscode adds these automatically, so i have no choice
-    "editor.suggestSelection": "first",
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+	// vscode adds these automatically, so i have no choice
+	"editor.suggestSelection": "first",
+	"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 }
