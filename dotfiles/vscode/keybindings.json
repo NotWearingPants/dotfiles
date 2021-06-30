@@ -17,4 +17,13 @@
 	{ "key": "ctrl+l c", "command": "-extension.copyGitHubLinkToClipboard" },
 	{ "key": "ctrl+l g", "command": "-extension.openInGitHub" },
 	{ "key": "ctrl+l p", "command": "-extension.openPrGitProvider" },
+
+	// remove liveshare conflict with bookmarks extension
+	{ "key": "ctrl+alt+j", "command": "-liveshare.join", "when": "liveshare:state != 'Joined' && liveshare:state != 'Shared'" },
+
+	// i only use "tab moves focus" by accident
+	{ "key": "ctrl+m", "command": "-editor.action.toggleTabFocusMode" },
+
+	// Alt+T to open terminal at the location of the current file
+	{ "key": "alt+t", "command": "workbench.action.terminal.newWithCwd", "args": { "cwd": "${fileDirname}" } },
 ]
