@@ -1,5 +1,7 @@
 # IPython interpreter
 ipython
+# IPython autoimport extension
+ipython-autoimport
 
 # colored terminal text
 colorama
@@ -61,6 +63,7 @@ pwntools
 
 # crypto algorithms
 pycrypto
+cryptography
 
 # game framework
 pygame
@@ -83,11 +86,14 @@ pypiwin32
 # serial port API for COM over USB
 pyserial
 
+# jupyter notebook (GUI REPL)
+jupyter
+
 # linter
 pylint
 
-# jupyter notebook (GUI REPL)
-jupyter
+# style linter
+black
 
 # refactoring utilities
 rope
