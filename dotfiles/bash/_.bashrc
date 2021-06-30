@@ -77,5 +77,9 @@ if [[ $os == 'Mac' ]]; then
     alias subl="/Applications/Sublime\ Text.app/Contents/MacOS/Sublime\ Text"
 fi
 
+# make file operations verbose
+alias mv='mv -v'
+alias cp='cp -v'
+
 # for x server programs
 export DISPLAY=:0

@@ -7,6 +7,10 @@ alias l='ls -A --group-directories-first'
 alias ll='ls -lAh --group-directories-first'
 alias lll='ls -lA --group-directories-first'
 
+# make file operations verbose
+alias mv='mv -v'
+alias cp='cp -v'
+
 # for x server programs
 set --export DISPLAY :0
 
