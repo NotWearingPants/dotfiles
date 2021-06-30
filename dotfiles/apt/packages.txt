@@ -1,6 +1,7 @@
 # after each package there is a comment with the commands i want from it
 
 fish # fish
+# TODO: install docker (might require adding the docker repo, or docker/docker-ce/docker.io)
 # TODO: somehow install bat, it's not in apt yet (https://github.com/sharkdp/bat)
 nasm # nasm
 file # file
@@ -8,23 +9,25 @@ gdb # gdb
 gdbserver # gdbserver
 gcc # gcc
 g++ # g++
+gcc-multilib # NOTE: 32bit support for gcc
+g++-multilib # NOTE: 32bit support for g++
 passwd # passwd chsh
 bash # bash
 bash-completion # /usr/share/bash-completion
 netcat-openbsd # nc
-nodejs # nodejs
-npm # npm
-php # php
+nodejs # nodejs npm npx
+php # php TODO: what is php-cli and how is it different?
 python3 # python3
 python3-pip # pip3
 python # python2
 python-pip # pip2
 make # make
+cmake # cmake
 util-linux # unshare lsblk dmesg mkfs
 vim # vim view
 neovim # nvim
 vim-common # xxd
-bsdmainutils # hexdump
+bsdmainutils # hexdump cal
 nano # nano
 cowsay # cowsay
 toilet # toilet
@@ -50,8 +53,11 @@ gzip # gzip gunzip
 zip # zip
 unzip # unzip
 unrar # unrar
-xz-utils # unxz
+xz-utils # xz unxz
 bzip2 # bunzip2
+p7zip-full # 7z
+p7zip-rar # NOTE: for rar extraction support in 7z
+upx # upx NOTE: for unpacking not packing
 debianutils # which
 patch # patch
 hostname # hostname
@@ -64,7 +70,7 @@ findutils # xargs find
 tree # tree
 binutils # nm objdump readelf objcopy ld strip as strings ar
 libc-bin # ldd
-procps # ps top kill pkill w pgrep
+procps # ps top kill pkill killall w pgrep
 sysvinit-utils # pidof
 htop # htop
 ncurses-bin # clear reset tput
@@ -83,6 +89,7 @@ traceroute # traceroute
 upstart # shutdown reboot
 dos2unix # dos2unix unix2dos
 diffutils # diff
+powershell # pwsh
 screen # screen
 tmux # tmux
 mlocate # locate
@@ -90,19 +97,22 @@ parallel # parallel
 radare2 # r2
 clang # clang # TODO: add other commands we need from clang
 adb # adb
+ffmpeg # ffmpeg
+# TODO: install ImageMagick (requires building from source)
+qrencode # qrencode
+exiftool # exiftool
 
 # https://stackoverflow.com/questions/22300551/command-not-found-0-2-44-in-pips-freeze
 command-not-found # /usr/lib/command-not-found
 command-not-found-data # /usr/share/command-not-found/commands.db
 
 # java and friends
-openjdk-11-jre-headless # java
-openjdk-11-jdk-headless # javac javap jar jarsigner
+default-jre # java
+default-jdk # javac javap jar jarsigner
 
 # TODO: only if ubuntu
 #dpkg # dpkg
 #apt # apt
-#lsb-release # lsb_release
 
 # TODO: only if termux
 #am
