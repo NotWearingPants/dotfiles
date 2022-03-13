@@ -30,6 +30,7 @@ vim-common # xxd
 bsdmainutils # hexdump cal
 nano # nano
 cowsay # cowsay
+cmatrix # cmatrix
 toilet # toilet
 figlet # figlet
 fortune # fortune
