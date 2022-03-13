@@ -8,10 +8,19 @@
 	# "PowerShell v$versionMajor.$versionMinor $($versionBits)bit | $env:USERNAME@$env:COMPUTERNAME"
 }
 
+# TODO: what is the builtin $IsCoreClr and is it the same?
+$IsPSCore = $PSVersionTable.PSEdition -eq 'Core' # rather than 'Desktop'
+# add the cross-platform variables
+if (-not $IsPSCore) {
+	$IsWindows = $true
+	$IsLinux = $false
+	$IsMacOS = $false
+}
+
 # set the prompt: `[time] user:cwd$ `
 function prompt {
 	$time = Get-Date -Format 'HH:mm'
-	$username = if ($IsWindows -or $IsWindows -eq $null) { $env:USERNAME } else { $env:USER }
+	$username = if ($IsWindows) { $env:USERNAME } else { $env:USER }
 	$location = (Get-Location).Path.Replace($HOME, '~')
 	if ($IsWindows) {
 		$location = $location.Replace('C:', '').Replace('\', '/')
@@ -75,6 +84,12 @@ function routerip {
 function publicip {
 	((Invoke-WebRequest https://api.ipify.org/?format=json).content | ConvertFrom-Json).IP
 }
+if ($IsWindows) {
+	function dnsoverhttps {
+		param($hostname)
+		wsl curl --silent --http2 -H 'accept: application/dns-json' "'https://1.1.1.1/dns-query?name=$hostname'" `| jq -r '.Answer[0].data'
+	}
+}
 
 function dockersetup {
 	$machineName = 'docker'
@@ -86,19 +101,60 @@ function dockerssh {
 	docker-machine ssh "$machineName"
 }
 
+# fix priority in PATH problem with java for ffdec
+function ffdec {
+	~\scoop\apps\oraclejre8\current\bin\java -jar $HOME\scoop\apps\ffdec\current\ffdec.jar
+}
+
+# easy shortcut for the pywin32 docs
+if ($IsWindows) {
+	function pywin32 {
+		Start-Process '~/scoop/apps/python/current/Lib/site-packages/PyWin32.chm'
+	}
+}
+
 # disable legacy `bash` command in favor of `wsl`,
 # because it opens `bash` regardless of the default shell configured
 function bash {
 	'No, run `wsl`'
 }
 
+# edit the command history text file
+function historyedit {
+	code (Get-PSReadLineOption).HistorySavePath
+}
+
+# commands to reload the profile
+# TODO: this doesn't reload functions that i change
+# TODO: `new-alias`/`remove-alias` commands fail
+function reloadprofile {
+	@(
+		$Profile.AllUsersAllHosts,
+		$Profile.AllUsersCurrentHost,
+		$Profile.CurrentUserAllHosts,
+		$Profile.CurrentUserCurrentHost
+	) | % {
+		if (Test-Path $_) {
+			Write-Verbose "Running $_"
+			$measure = Measure-Command {
+				. $_
+			}
+			"Took $($measure.TotalSeconds) seconds"
+		}
+	}
+}
+
+# for natural sort
+# usage: ls | sort $natural
+$natural = { [regex]::Replace($_, '\d+', { $args[0].Value.PadLeft(20) }) }
+
 # delete sl which is aliased to cd, because when writing ls fast you might accidentally go back to the home folder
 # TODO: install the equivalent of linux's sl, or alias sl to ls
-if ($PSVersionTable.PSEdition -eq 'Desktop') {
+if ($IsPSCore) {
+	Remove-Alias sl -Force
+} else {
 	# old powershell doesn't support remove-alias
 	Remove-Item alias:\sl -Force
-} else {
-	Remove-Alias sl -Force
 }
 
 # TODO: use https://github.com/mikebattista/PowerShell-WSL-Interop#usage
