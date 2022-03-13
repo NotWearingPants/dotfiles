@@ -9,12 +9,18 @@ doskey bash=echo No, run `wsl`
 doskey powershell=echo No, run `pwsh`
 
 :: exit with ^D and Enter
-doskey =exit
+:: supply an explicit exit code since otherwise the exit code will be the exit code of the last command we ran
+doskey =exit 0
+:: cls with ^P and Enter since ^L can't be bound
+doskey =cls
+doskey cls=echo No, use Control+P
 
 :: linux-like aliases
-doskey ls=dir
-:: TODO: doesn't work, seems aliases can't accept extra args
-doskey cat=type
+doskey ls=dir $*
+doskey cat=type $*
+doskey ~=cd %USERPROFILE%
+:: NOTE: doskey also works with a file: `doskey /macrofile=path\to\macros.mac`
+:: this file should just have lines that look like `foo=bar`, and comments using semicolon
 
 :: greetings
 :: TODO: this also outputs in non-login shells, make it stop
