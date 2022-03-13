@@ -10,6 +10,11 @@ alias lll='ls -lA --group-directories-first'
 # make file operations verbose
 alias mv='mv -v'
 alias cp='cp -v'
+alias rm='rm -v'
+alias rmdir='rmdir -v'
+
+# delete the default Ctrl+R keybinding which tries to run fzf
+bind --erase \cr
 
 # for x server programs
 set --export DISPLAY :0
