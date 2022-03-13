@@ -37,6 +37,11 @@ function prompt {
 # NOTE: the `d` here must be lowercase
 Set-PSReadlineKeyHandler -Key Ctrl+d -Function ViExit
 
+# fish-like tab completions, showing a navigatable menu of completions
+# for more than 100 completion options it will ask y/n and print completions instead of a menu
+# NOTE: Ctrl+Alt+? (question mark) will show all keybindings, and Alt+? will show a specific one
+Set-PSReadLineKeyHandler -Key Tab -Function MenuComplete
+
 # turn off the bell, i hate it
 Set-PSReadlineOption -BellStyle None
 
@@ -163,3 +168,81 @@ if ($IsPSCore) {
 
 # fix python unicode output
 $env:PYTHONIOENCODING = 'utf-8'
+
+
+# Windows only: change tab completion to use '/' instead of '\', remove 'C:', and abbreviate home as ~ (linux already abbreviates)
+# modified from https://github.com/PowerShell/PowerShell/issues/10509#issuecomment-740220540
+if ($IsWindows) {
+	$private:globalScopeVariable = $true
+
+	# change the TabExpansion2 function to replace the path separators in tab completions of file and directory paths
+	# the default function is defined in https://github.com/PowerShell/PowerShell/blob/403767d7f7b910a6f315505287fe9a72c3960c52/src/System.Management.Automation/engine/InitialSessionState.cs#L4100-L4149
+	function TabExpansion2 {
+		[CmdletBinding(DefaultParameterSetName = 'ScriptInputSet')]
+		Param(
+			[Parameter(ParameterSetName = 'ScriptInputSet', Mandatory = $true, Position = 0)]
+			[string] $inputScript,
+
+			[Parameter(ParameterSetName = 'ScriptInputSet', Position = 1)]
+			[int] $cursorColumn = $inputScript.Length,
+
+			[Parameter(ParameterSetName = 'AstInputSet', Mandatory = $true, Position = 0)]
+			[System.Management.Automation.Language.Ast] $ast,
+
+			[Parameter(ParameterSetName = 'AstInputSet', Mandatory = $true, Position = 1)]
+			[System.Management.Automation.Language.Token[]] $tokens,
+
+			[Parameter(ParameterSetName = 'AstInputSet', Mandatory = $true, Position = 2)]
+			[System.Management.Automation.Language.IScriptPosition] $positionOfCursor,
+
+			[Parameter(ParameterSetName = 'ScriptInputSet', Position = 2)]
+			[Parameter(ParameterSetName = 'AstInputSet', Position = 3)]
+			[Hashtable] $options = $null
+		)
+
+		End {
+			$completions = if ($psCmdlet.ParameterSetName -eq 'ScriptInputSet') {
+				[System.Management.Automation.CommandCompletion]::CompleteInput($inputScript, $cursorColumn, $options)
+			}
+			else {
+				[System.Management.Automation.CommandCompletion]::CompleteInput($ast, $tokens, $positionOfCursor, $options)
+			}
+
+			# tab completion will call us from the global scope, guard against it to not affect anything else
+			if (Get-Variable -ErrorAction Ignore -Scope 1 -ValueOnly globalScopeVariable) {
+				# fix the separators in file-system path completions
+				for ($i = 0; $i -lt $completions.CompletionMatches.Count; $i++) {
+					$cm = $completions.CompletionMatches[$i]
+
+					# only modify filesystem paths (file or directory)
+					if ($cm.ResultType -notin 'ProviderItem', 'ProviderContainer') { continue }
+
+					# replace the separators, main drive, and abbreviate home
+					$text = $cm.CompletionText.Replace($HOME, '~').Replace('C:', '').Replace('\', '/')
+
+					# the text of directory paths lacks a final separator which is added by PSReadLine
+					# (https://github.com/PowerShell/PSReadLine/blob/dc38b451bee4bdf07f7200026be02516807faa09/PSReadLine/Completion.cs#L369-L372)
+					# so to change it we append it ourselves and change ResultType to always be 'ProviderItem' so it won't append the separator
+					# we also need to handle a possibly quoted path. this unfortunately makes PSReadLine not move the cursor back to before the quote to continue typing
+					if ($cm.ResultType -eq 'ProviderContainer') {
+						$suffix = ''
+						if ($text.EndsWith("'") -or $text.EndsWith('"')) {
+							$suffix = $text[-1]
+							$text = $text.Remove($text.Length - 1)
+						}
+						if (-not $text.EndsWith('/')) {
+							$text += '/'
+						}
+						$text += $suffix
+					}
+
+					# replace the completion with the new one, and set the type to always be a file to prevent PSReadLine from appending a backslash
+					$completions.CompletionMatches[$i] = [System.Management.Automation.CompletionResult]::new($text, $cm.ListItemText, 'ProviderItem', $cm.ToolTip)
+				}
+			}
+
+			# return the potentially modified completions
+			$completions
+		}
+	}
+}
