@@ -1,3 +1,4 @@
+# TODO: GHCi for Haskell
 nodejs
 git
 git-filter-repo
