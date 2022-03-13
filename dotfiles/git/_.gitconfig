@@ -1,6 +1,10 @@
 # include another gitconfig file which should contain the user settings
 [include]
-	path = ~/.gitconfig-user
+	path = ~/.config/git/config-user
+
+# prevent guessing user & email config when not configured
+[user]
+	useConfigOnly = true
 
 [core]
 	autocrlf = false
@@ -8,6 +12,10 @@
 [push]
 	# avoid setting upstream everytime
 	default = current
+
+[pull]
+	# pull will fail if fast-forward is not possible instead of merging without asking
+	ff = only
 
 [alias]
 	h=help
@@ -38,6 +46,8 @@
 	p=push
 	pf=push --force
 	pl=pull
+	pull-merge=pull --no-rebase
+	pm=pull --no-rebase
 	f=fetch --all
 	m=merge
 	rv=revert
@@ -52,3 +62,6 @@
 	clean-new=clean -fd # cleans untracked files, doesn't affect ignored files
 	clean-ignored=clean -fdx # cleans untracked files including ignored files
 	chmodx=update-index --chmod=+x
+	# TODO: delete the `wsl` when already in linux
+	# NOTE: i have no idea why git hates backslashes and forward slashes only sometimes. quotes also don't work well
+	alias=!git config --get-regexp ^alias\\. | wsl sed -e s/^alias\\.// -e s_\\ _\\ =\\ _

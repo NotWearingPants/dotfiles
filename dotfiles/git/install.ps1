@@ -7,6 +7,8 @@ New-Folder '~\.config\git\'
 New-Symlink '~\.config\git\ignore' "$PSScriptRoot\_.gitignore"
 New-Symlink '~\.config\git\config' "$PSScriptRoot\_.gitconfig"
 
+Write-Host 'Enter your git details in ~\.config\git\config-user'
+
 # setup bash for git bash
 . "$PSScriptRoot\..\bash\install.ps1"
 
