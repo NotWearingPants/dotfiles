@@ -31,7 +31,7 @@ Windows Registry Editor Version 5.00
 ; use dark theme
 "AppsUseLightTheme"=dword:0
 
-[HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor]
+[HKEY_CURRENT_USER\Software\Microsoft\Command Processor]
 
 ; run a script on cmd startup
 "AutoRun"="%USERPROFILE%\\profile.cmd"
@@ -93,3 +93,35 @@ Windows Registry Editor Version 5.00
 
 ; remember the last 0x1000 commands
 "HistoryBufferSize"=dword:1000
+
+; configure post-mortem debugger program for when programs crash
+; https://docs.microsoft.com/en-us/windows/win32/debug/configuring-automatic-debugging
+; https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/enabling-postmortem-debugging
+; the first `%ld` gets the pid, the second `%ld` gets the event handle
+; the %p gets the unprefixed hex address of a JIT_DEBUG_INFO structure in the crashed process address space, can be used in windbg with `.jdinfo`
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AeDebug]
+; for Visual Studio's Just-in-Time debugger:
+;   "Debugger"="\"C:\WINDOWS\system32\vsjitdebugger.exe\" -p %ld -e %ld"
+; for WinDBG (equivalent to running `windbg -I`):
+;   "Debugger"="\"%USERPROFILE%\scoop\apps\windbg\current\Windows Kits\10\Debuggers\x64\windbg.exe\" -p %ld -e %ld -g"
+;   "Auto"="1"
+; for procdump to create a crash dump:
+;   "Debugger"="...\procdump.exe -accepteula -j C:\Dumps %ld %ld %p"
+; set to nothing:
+"Debugger"=-
+
+; Windows Error Reporting popup
+; NOTE: can also be controlled in powershell using `{Enable/Disable/Get}-WindowsErrorReporting`
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\Windows Error Reporting]
+; "Disabled"=dword:1
+; "DontShowUI"=dword:1
+
+; Image File Execution Options - configure debugger, launched program path is appended as another argument
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\calc.exe]
+; the `-X` is to ignore the appended program path which throws off python, it sets config values so the name doesn't matter
+"Debugger"="python -X"
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Applets\Regedit\Favorites]
+
+; Add windbg workspaces registry tree to regedit's favorites
+"WinDBG Workspaces"="Computer\HKEY_CURRENT_USER\Software\Microsoft\Windbg\Workspaces\User"
