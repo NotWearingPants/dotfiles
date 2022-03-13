@@ -246,3 +246,101 @@ if ($IsWindows) {
 		}
 	}
 }
+
+
+# show help on the currently typed command with Ctrl+H
+# modified from https://github.com/PowerShell/PSReadLine/blob/dc38b451bee4bdf07f7200026be02516807faa09/PSReadLine/SamplePSReadLineProfile.ps1#L481-L517
+# TODO: PowerShell 7.2 has a help command using the F1 key, but it isn't released yet, update to it and delete this
+# (https://docs.microsoft.com/en-us/powershell/module/psreadline/about/about_psreadline?view=powershell-7.2#showcommandhelp)
+Set-PSReadLineKeyHandler -Key Ctrl+h -ScriptBlock {
+	param($key, $arg)
+
+	$commandName = & {
+		$ast = $null
+		$tokens = $null
+		$errors = $null
+		$cursor = $null
+		[Microsoft.PowerShell.PSConsoleReadLine]::GetBufferState([ref]$ast, [ref]$tokens, [ref]$errors, [ref]$cursor)
+
+		$commandAst = $ast.FindAll({
+			$node = $args[0]
+			$node -is [System.Management.Automation.Language.CommandAst] -and
+				$node.Extent.StartOffset -le $cursor -and $cursor -le $node.Extent.EndOffset
+		}, $true) | Select-Object -Last 1
+
+		if ($commandAst -eq $null) { return }
+		$commandName = $commandAst.GetCommandName()
+		if ($commandName -eq $null) { return }
+		$command = $ExecutionContext.InvokeCommand.GetCommand($commandName, 'All')
+		if ($command -is [System.Management.Automation.AliasInfo]) {
+			$commandName = $command.ResolvedCommandName
+		}
+		if ($commandName -eq $null) { return }
+		return $commandName
+	}
+
+	# TODO: output the help or message, and then restore the prompt and input to as it was
+	if ($commandName -ne $null) {
+		# TODO: use a pager like `| more` or `| wsl less`
+		# powershell are working on their own pager (https://github.com/PowerShell/Pager)
+		Get-Help $commandName | Out-Host
+	}
+	else {
+		Write-Host -ForegroundColor Red 'No command found to show help for.'
+	}
+}
+
+# add a `less` command from wsl if you need it and have it
+# from https://stackoverflow.com/a/59240939/2566065
+# NOTE: we also want to check `-and (wsl which less)`, but wsl eats the input buffer which makes it annoying at startup, so we just hope
+if (-not (Get-Command -ErrorAction Ignore less) -and (Get-Command -ErrorAction Ignore wsl)) {
+	function less {
+		$prevEncodings = $OutputEncoding, [Console]::OutputEncoding
+		try {
+			$OutputEncoding = [Console]::OutputEncoding = [Text.Utf8Encoding]::new()
+			$Input | wsl less
+		}
+		finally {
+			$OutputEncoding, [Console]::OutputEncoding = $prevEncodings
+		}
+	}
+}
+# NOTE: we also want to check `-and (wsl which bat)`, but wsl eats the input buffer which makes it annoying at startup, so we just hope
+if (Get-Command -ErrorAction Ignore wsl) {
+	function bat {
+		$prevEncodings = $OutputEncoding, [Console]::OutputEncoding
+		try {
+			$OutputEncoding = [Console]::OutputEncoding = [Text.Utf8Encoding]::new()
+			$Input | wsl bat $args
+		}
+		finally {
+			$OutputEncoding, [Console]::OutputEncoding = $prevEncodings
+		}
+	}
+}
+# set the pager for the `help` command to `bat` or `less`
+if ($IsPSCore) {
+	if (Get-Command -ErrorAction Ignore bat) {
+		function helpPager {
+			# TODO: the `help` command already seems to do stuff with encoding, can we pipe into `wsl bat` instead of our own function with encoding handling?
+			$Input | bat --plain --language man
+		}
+	} elseif (Get-Command -ErrorAction Ignore less) {
+		# this is either an existing `less` or the function we created above
+		function helpPager {
+			$Input | less
+		}
+	}
+
+	# TODO: this doesn't work for an unknown reason so it's disabled for now
+	if ($false -and (Get-Command -ErrorAction Ignore helpPager)) {
+		# if we just set $env:PAGER then other programs such as python's help() try to use it and fail
+		# so instead we hook powershell's help command
+		$originalHelp = (Get-Command help).ScriptBlock
+		function help {
+			$env:PAGER = 'helpPager'
+			& $originalHelp $args
+			$env:PAGER = $null
+		}
+	}
+}
