@@ -11,6 +11,8 @@ function New-Symlink {
 		}
 		Write-Output "Symlink {$linkLocation --> $linkTarget} exists"
 	} else {
+		# TODO: throw an error if $linkTarget doesn't exist
+		# TODO: throw an error if $linkTarget is a relative path - it creates the link with an actual relative path, so it won't work
 		New-Item -ItemType SymbolicLink "$linkLocation" -Target "$linkTarget" -ErrorAction Stop | Out-Null
 		Write-Output "Symlinked {$linkLocation --> $linkTarget}"
 	}
@@ -39,4 +41,12 @@ function Load-ListFile {
 	)
 
 	Select-String -Pattern '^\s*([^#]+?)\s*(?:#|$)' -Path "$location" | ForEach-Object { $_.Matches.Groups[1].Value }
+}
+
+function Is-Admin {
+	[OutputType([bool])]
+	param()
+
+	[Security.Principal.WindowsPrincipal]$user = [Security.Principal.WindowsIdentity]::GetCurrent()
+	return $user.IsInRole([Security.Principal.WindowsBuiltinRole]::Administrator)
 }
