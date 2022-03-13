@@ -18,6 +18,48 @@ if (-not $IsPSCore) {
 }
 
 # set the prompt: `[time] user:cwd$ `
+$promptSuffix = & {
+	[Security.Principal.WindowsPrincipal]$user = [Security.Principal.WindowsIdentity]::GetCurrent()
+	$isAdmin = $user.IsInRole([Security.Principal.WindowsBuiltinRole]::Administrator)
+
+	$nesting = 1
+	$process = Get-Process -Id $PID
+	while ($true) {
+		$process = $process.Parent
+
+		if ($process.Name -notin @('pwsh', 'powershell', 'cmd')) {
+			break
+		}
+
+		# TODO: Powershell 7.1 supports `$process.CommandLine`, update and replace this
+		$cmdline = (Get-CimInstance Win32_Process -Filter "ProcessId = $($process.Id)").CommandLine.ToLower()
+		if (-not (
+			(
+				($process.Name -in @('pwsh', 'powershell')) -and
+				(
+					$cmdline.Contains('/command') -or
+					$cmdline.Contains('-command') -or
+					$cmdline.Contains('-c') -or
+					$cmdline.Contains('/file') -or
+					$cmdline.Contains('-file') -or
+					$cmdline.Contains('-f')
+				)
+			) -or (
+				($process.Name -eq 'cmd') -and
+				(
+					$cmdline.Contains('/c') -or
+					$cmdline.Contains('/k')
+				)
+			)
+		)) {
+			$nesting += 1
+		}
+	}
+
+	$char = if ($isAdmin) { '#' } else { '$' }
+	($char * $nesting) + ' '
+}
+
 function prompt {
 	$time = Get-Date -Format 'HH:mm'
 	$username = if ($IsWindows) { $env:USERNAME } else { $env:USER }
@@ -30,7 +72,7 @@ function prompt {
 	Write-Host -NoNewLine -ForegroundColor Green "$username"
 	Write-Host -NoNewLine ":"
 	Write-Host -NoNewLine -ForegroundColor Yellow "$location"
-	"$ "
+	$promptSuffix
 }
 
 # exit using Ctrl+D
