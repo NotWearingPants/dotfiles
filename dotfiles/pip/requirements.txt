@@ -3,6 +3,9 @@ ipython
 # IPython autoimport extension
 ipython-autoimport
 
+# MOAR ITERTOOLS
+more-itertools
+
 # colored terminal text
 colorama
 
@@ -22,6 +25,9 @@ scapy
 # isolated python environment manager
 virtualenv
 
+# progress bars
+tqdm
+
 # image library
 Pillow
 
@@ -39,10 +45,11 @@ opencv-python
 
 # data manipulation and analysis
 pandas
+# parse XLSX files with pandas
+openpyxl
 
 # parse PE files
 pefile
-
 # parse ELF files
 pyelftools
 
@@ -50,7 +57,9 @@ pyelftools
 git-filter-repo
 
 # parse and create PDF files
-pypdf4
+PyPDF4
+pikepdf
+pdfminer
 
 # Kaitai Struct
 kaitaistruct
@@ -59,10 +68,11 @@ kaitaistruct
 construct
 
 # CTF utilities
-pwntools
+pwntools; os_name == 'posix'
 
 # crypto algorithms
 pycrypto
+pycryptodome
 cryptography
 
 # game framework
@@ -81,7 +91,7 @@ docker-compose
 capstone
 
 # Win32 API bindings
-pypiwin32
+pywin32
 
 # serial port API for COM over USB
 pyserial
@@ -114,3 +124,6 @@ wheel
 pathlib2; python_version < '3'
 enum34; python_version < '3'
 subprocess32; python_version < '3'
+
+# how to restrict to specific version/os:
+# https://peps.python.org/pep-0508/#environment-markers
