@@ -1,3 +1,5 @@
+#requires -RunAsAdministrator
+
 Import-Module "$PSScriptRoot\..\..\scripts\utils.psm1"
 
 function Install-VSCodeExtensions {

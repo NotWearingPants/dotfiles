@@ -61,6 +61,7 @@
 	ss=submodule sync
 	clean-new=clean -fd # cleans untracked files, doesn't affect ignored files
 	clean-ignored=clean -fdx # cleans untracked files including ignored files
+	backup-status=status --untracked-files --ignored --show-stash # command to check uncommitted things before deleting a local repo
 	chmodx=update-index --chmod=+x
 	# TODO: delete the `wsl` when already in linux
 	# NOTE: i have no idea why git hates backslashes and forward slashes only sometimes. quotes also don't work well
