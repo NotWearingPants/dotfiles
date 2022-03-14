@@ -5,6 +5,9 @@ c = get_config()
 
 c.InteractiveShell.confirm_exit = False
 
+# editor for the `edit` magic (defaults to $EDITOR/vim/notepad)
+#c.TerminalInteractiveShell.editor = 'subl -w'
+
 c.InteractiveShellApp.extensions = [
 	# autoreload all imported modules
 	# https://ipython.readthedocs.io/en/stable/config/extensions/autoreload.html
