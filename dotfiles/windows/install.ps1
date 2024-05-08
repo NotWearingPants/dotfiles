@@ -38,6 +38,7 @@ scoop bucket add retools 'https://github.com/TheCjw/scoop-retools.git'
 New-Folder '~\scoop\buckets\local'
 New-Symlink '~\scoop\buckets\local\bucket' "$PSScriptRoot\scoop-packages"
 
+# TODO: switch to using `winget`
 # install scoop packages
 $scoopPackagesToInstall = Load-ListFile "$PSScriptRoot\scoop-packages.txt"
 scoop install $scoopPackagesToInstall
@@ -54,6 +55,7 @@ choco install -y '.\chocolatey-packages.config'
 
 # TODO: install {Ubuntu (WSL), Windows Terminal, Windbg Preview, Nesbox, Minecraft, Minesweeper, Taki} from the Microsoft Store somehow
 # TODO: install {Chrome, Edgium, VS Code, VS Code Insiders, Steam, Discord, Office, Zoom} (without scoop/chocolatey)
+# TODO: install {winget, Windows Terminal} if they're missing (old Windows version)
 
 # TODO: get all installed apps using https://stackoverflow.com/questions/16452540/registry-path-to-find-all-the-installed-applications/62544878 and warn about those installed from outside of this script
 
