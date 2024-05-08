@@ -1,3 +1,4 @@
+pwsh
 # TODO: GHCi for Haskell
 nodejs
 git
