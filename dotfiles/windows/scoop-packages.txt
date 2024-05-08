@@ -62,6 +62,12 @@ ripgrep
 # install ffmpeg for the VSCode screen recorder extension Chronicler
 ffmpeg
 
+powertoys
+# launcher search box
+ueli
+# 3D printing
+cura
+
 # TODO: install Visual Studio Build Tools (for CL, Spy++, NMake, MSBuild)
 # TODO: install MSDN?
 
