@@ -1,89 +1,89 @@
-pwsh
+main/pwsh
 # TODO: GHCi for Haskell
-nodejs
-git
-git-filter-repo
-7zip
+main/nodejs
+main/git
+main/git-filter-repo
+main/7zip
 local/7zip-feature-add-to-context-menu
-wireshark
-fiddler
-graphviz
-vlc
-nasm
-sqlite
-rustup
-kotlin-native
-beyondcompare
-sysinternals
-winscp
-spacesniffer
-wabt
-llvm
-neovim
-gitkraken
-dotnet-sdk
-mongodb
-everything
-virtualbox-np
+extras/wireshark
+extras/fiddler
+main/graphviz
+extras/vlc
+main/nasm
+main/sqlite
+main/rustup
+main/kotlin-native
+extras/beyondcompare
+extras/sysinternals
+extras/winscp
+extras/spacesniffer
+extras/wabt
+main/llvm
+main/neovim
+extras/gitkraken
+main/dotnet-sdk
+main/mongodb
+extras/everything
+nonportable/virtualbox-np
 retools/cff-explorer
 local/windbg
-010editor
-adb
-nmap
-vcxsrv
+extras/010editor
+main/adb
+main/nmap
+extras/vcxsrv
 
 # Useful commands such as "sudo" and "shasum"
-psutils
+main/psutils
 
 # Nushell
-nu
+main/nu
 
-less
-sharpkeys
-speedtest-cli
+main/less
+extras/sharpkeys
+main/speedtest-cli
 
 # NOTE: it's important that python3 comes after python2
 # because they both add a "python" command and overwrite each other
-python27
-python
+versions/python27
+main/python
 # allow applications and third-party installers to find python 3
 local/python-feature-discoverable
 
-sublime-text
+extras/sublime-text
 local/sublime-text-feature-add-to-context-menu
 local/sublime-text-feature-package-control
 
-paint.net
-paint.net-plugin-boltbait
-paint.net-plugin-pyrochild
+extras/paint.net
+extras/paint.net-plugin-boltbait
+extras/paint.net-plugin-pyrochild
 local/paint.net-plugin-codelab
 
 # TODO: find a 32bit version to be able to open old .idb files, IDA free is 64bit and uses .i64 only
-ida-free
+extras/ida-free
 
 # Docker Toolbox (installs docker client and docker-machine)
-docker
+main/docker
 
 # ffdec requires an old Java
-oraclejre8
+java/oraclejre8
 # JDK + JRE
 # NOTE: it's important that the new java comes after the old one
 # because they both change PATH and overwrite each other
-openjdk
+java/openjdk
 
-ripgrep
+main/ripgrep
 
 # install ffmpeg for the VSCode screen recorder extension Chronicler
-ffmpeg
+main/ffmpeg
 
-powertoys
+extras/powertoys
 # launcher search box
-ueli
+extras/ueli
 # 3D printing
-cura
+extras/cura
 
 # pdf CLI tool
-qpdf
+main/qpdf
 
 # TODO: install Visual Studio Build Tools (for CL, Spy++, NMake, MSBuild)
 # TODO: install MSDN?
@@ -95,44 +95,44 @@ qpdf
 #       or give up and just install `extras/android-studio`
 
 # pack and unpack Android APK files (doesn't decompile)
-apktool
+main/apktool
 
 # unpack and decompile android apk
-jadx
+extras/jadx
 
 # TODO: consider for android reversing
-#dex2jar
+#retools/dex2jar
 
 # Java decompiler (the command is jd-cli)
-jd-cmd
+retools/jd-cmd
 # C# decompiler
-ilspy
+extras/ilspy
 # Flash decompiler
-ffdec
+extras/ffdec
 
 # TODO: consider
-#autohotkey
-#gow / coreutils / grep
-#clink
+#extras/autohotkey
+#main/gow / main/coreutils / main/grep
+#main/clink
 
 # x86 PC emulator
-bochs
+main/bochs
 
 # Adobe Flash Player Projector (https://www.adobe.com/support/flashplayer/debug_downloads.html)
 # to play flash games without a browser
-flashplayer-sa
+extras/flashplayer-sa
 
 # a game emulator for several consoles
-bizhawk
+extras/bizhawk
 
 # PPSSPP - a PSP emulator
-ppsspp
+games/ppsspp
 
 # AMIDST - Mincraft map explorer
-amidst
+games/amidst
 
 # NBTExplorer - Minecraft world save explorer
-nbtexplorer
+games/nbtexplorer
 
 # TODO: install GameMaker
 # TODO: install Groupy

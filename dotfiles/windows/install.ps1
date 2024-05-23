@@ -43,7 +43,7 @@ New-Symlink '~\scoop\buckets\local\bucket' "$PSScriptRoot\scoop-packages"
 $scoopPackagesToInstall = Load-ListFile "$PSScriptRoot\scoop-packages.txt"
 $scoopPackagesInstalled = scoop list 6> $null | Select-Object -ExpandProperty Name
 # TODO: ignore packages that scoop installs automatically or as dependencies (e.g. lessmsi/dark/innounp/vcredist2005)
-$scoopPackagesToInstallNormalized = $scoopPackagesToInstall | % { $_.Replace('local/', '') }
+$scoopPackagesToInstallNormalized = $scoopPackagesToInstall | % { $_.Split('/')[1] }
 $scoopPackagesInstalledSeparately = $scoopPackagesInstalled | Where-Object { $scoopPackagesToInstallNormalized -notcontains $_ }
 if ($scoopPackagesInstalledSeparately) {
 	Write-Host 'Scoop packages installed separately:'
