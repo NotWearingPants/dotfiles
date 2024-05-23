@@ -43,13 +43,6 @@ New-Symlink '~\scoop\buckets\local\bucket' "$PSScriptRoot\scoop-packages"
 $scoopPackagesToInstall = Load-ListFile "$PSScriptRoot\scoop-packages.txt"
 scoop install $scoopPackagesToInstall
 
-# install chocolatey
-Invoke-WebRequest -UseBasicParsing 'https://chocolatey.org/install.ps1' | Invoke-Expression
-# TOOD: we might need to reload the PATH here before we use choco
-
-# install chocolatey packages
-choco install -y '.\chocolatey-packages.config'
-
 # make sure python3 takes precedence in path
 scoop reset python
 # make sure the latest java takes precedence in path
@@ -59,7 +52,7 @@ scoop reset openjdk
 # TODO: `cargo install bat` - doesn't compile
 
 # TODO: install {Ubuntu (WSL), Windows Terminal, Windbg Preview, Nesbox, Minecraft, Minesweeper, Taki} from the Microsoft Store somehow
-# TODO: install {Chrome, Edgium, VS Code, VS Code Insiders, Steam, Discord, Office, Zoom, pwsh} (without scoop/chocolatey)
+# TODO: install {Chrome, Edgium, VS Code, VS Code Insiders, Steam, Discord, Office, Zoom, pwsh} (without scoop)
 # TODO: install {winget, Windows Terminal} if they're missing (old Windows version)
 
 # TODO: get all installed apps using https://stackoverflow.com/questions/16452540/registry-path-to-find-all-the-installed-applications/62544878 and warn about those installed from outside of this script
