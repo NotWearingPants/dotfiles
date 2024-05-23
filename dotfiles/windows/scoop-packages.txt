@@ -37,6 +37,8 @@ psutils
 # Nushell
 nu
 
+sharpkeys
+
 # NOTE: it's important that python3 comes after python2
 # because they both add a "python" command and overwrite each other
 python27
