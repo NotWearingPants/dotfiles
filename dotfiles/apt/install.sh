@@ -9,3 +9,5 @@ rm /tmp/microsoft-repo.deb
 apt update
 
 # TODO: install packages
+# TODO: compare with `apt list --manual-installed` and notify about packages which were uninstalled separately
+#       see https://askubuntu.com/questions/2389/how-to-list-manually-installed-packages
