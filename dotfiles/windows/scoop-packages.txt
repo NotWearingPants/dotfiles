@@ -108,7 +108,7 @@ jd-cmd
 # C# decompiler
 ilspy
 # Flash decompiler
-local/ffdec
+ffdec
 
 # TODO: consider
 #autohotkey
