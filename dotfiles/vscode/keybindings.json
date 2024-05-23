@@ -26,4 +26,7 @@
 
 	// Alt+T to open terminal at the location of the current file
 	{ "key": "alt+t", "command": "workbench.action.terminal.newWithCwd", "args": { "cwd": "${fileDirname}" } },
+
+	// Ctrl+Shift+J to join lines
+	{ "key": "ctrl+shift+j", "command": "editor.action.joinLines" },
 ]
