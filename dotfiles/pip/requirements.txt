@@ -31,6 +31,16 @@ virtualenv
 # progress bars
 tqdm
 
+# CLI argument parsers
+click
+cloup
+typer
+
+# for CLI apps
+prompt-toolkit
+rich
+tabulate
+
 # image library
 Pillow
 
@@ -39,6 +49,13 @@ piexif
 
 # hash algorithms for checking image similarity
 ImageHash
+
+# audio libraries
+pydub
+librosa
+
+# YAML
+PyYAML
 
 # fast number arrays manipulation
 numpy
@@ -64,6 +81,9 @@ networkx
 
 # math animations
 manim
+
+# SAT solver
+z3-solver
 
 # parse PE files
 pefile
@@ -124,6 +144,7 @@ pylint
 
 # style linters
 black
+isort
 flake8
 
 # type linter
@@ -132,6 +153,8 @@ mypy
 # refactoring utilities
 rope
 bowler
+# static analysis
+jedi
 
 # code metrics utilities
 wily
@@ -143,6 +166,13 @@ twine
 # to install packages from source
 setuptools
 wheel
+
+# better dataclasses
+pydantic
+# better datetime
+python-dateutil
+# list running processes
+psutil
 
 # python2 backports
 pathlib2; python_version < '3'
