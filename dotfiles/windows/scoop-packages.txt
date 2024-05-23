@@ -37,6 +37,7 @@ psutils
 # Nushell
 nu
 
+less
 sharpkeys
 
 # NOTE: it's important that python3 comes after python2
