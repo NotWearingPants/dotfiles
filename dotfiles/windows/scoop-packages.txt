@@ -24,9 +24,9 @@ dotnet-sdk
 mongodb
 everything
 virtualbox-np
-cff-explorer
-windbg
-010editor
+retools/cff-explorer
+local/windbg
+local/010editor
 adb
 nmap
 vcxsrv
@@ -46,16 +46,16 @@ speedtest-cli
 python27
 python
 # allow applications and third-party installers to find python 3
-python-feature-discoverable
+local/python-feature-discoverable
 
 sublime-text
-sublime-text-feature-add-to-context-menu
-sublime-text-feature-package-control
+local/sublime-text-feature-add-to-context-menu
+local/sublime-text-feature-package-control
 
 paint.net
 paint.net-plugin-boltbait
 paint.net-plugin-pyrochild
-paintdotnet-plugin-codelab
+local/paintdotnet-plugin-codelab
 
 # TODO: find a 32bit version to be able to open old .idb files, IDA free is 64bit and uses .i64 only
 ida-free
@@ -106,7 +106,7 @@ jd-cmd
 # C# decompiler
 ilspy
 # Flash decompiler
-ffdec
+local/ffdec
 
 # TODO: consider
 #autohotkey
@@ -120,11 +120,11 @@ bochs
 # to play flash games without a browser
 flashplayer-sa
 
+# a game emulator for several consoles
+local/bizhawk
+
 # PPSSPP - a PSP emulator
 ppsspp
-
-# a game emulator for several consoles
-bizhawk
 
 # AMIDST - Mincraft map explorer
 amidst
