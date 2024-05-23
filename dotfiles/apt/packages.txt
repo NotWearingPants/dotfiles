@@ -97,6 +97,7 @@ mlocate # locate
 parallel # parallel
 radare2 # r2
 clang # clang # TODO: add other commands we need from clang
+valgrind # valgrind
 adb # adb
 ffmpeg # ffmpeg
 # TODO: install ImageMagick (requires building from source)
