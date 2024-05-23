@@ -123,7 +123,7 @@ bochs
 flashplayer-sa
 
 # a game emulator for several consoles
-local/bizhawk
+bizhawk
 
 # PPSSPP - a PSP emulator
 ppsspp
