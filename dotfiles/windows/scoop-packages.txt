@@ -27,7 +27,7 @@ everything
 virtualbox-np
 retools/cff-explorer
 local/windbg
-local/010editor
+010editor
 adb
 nmap
 vcxsrv
