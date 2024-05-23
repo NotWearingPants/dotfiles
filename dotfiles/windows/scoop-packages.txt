@@ -29,6 +29,7 @@ windbg
 010editor
 adb
 nmap
+vcxsrv
 
 # Useful commands such as "sudo" and "shasum"
 psutils
