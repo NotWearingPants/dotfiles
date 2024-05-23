@@ -82,6 +82,9 @@ ueli
 # 3D printing
 cura
 
+# pdf CLI tool
+qpdf
+
 # TODO: install Visual Studio Build Tools (for CL, Spy++, NMake, MSBuild)
 # TODO: install MSDN?
 
