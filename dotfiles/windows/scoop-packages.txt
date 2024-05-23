@@ -53,7 +53,7 @@ sublime-text-feature-add-to-context-menu
 sublime-text-feature-package-control
 
 paint.net
-paintdotnet-plugin-pack-boltbait
+paint.net-plugin-boltbait
 paint.net-plugin-pyrochild
 paintdotnet-plugin-codelab
 
