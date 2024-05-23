@@ -56,7 +56,7 @@ local/sublime-text-feature-package-control
 paint.net
 paint.net-plugin-boltbait
 paint.net-plugin-pyrochild
-local/paintdotnet-plugin-codelab
+local/paint.net-plugin-codelab
 
 # TODO: find a 32bit version to be able to open old .idb files, IDA free is 64bit and uses .i64 only
 ida-free
