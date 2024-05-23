@@ -101,6 +101,9 @@ Flask
 # database ORM
 SQLAlchemy
 
+# docs generator
+Sphinx
+
 # docker-compose command
 docker-compose
 
