@@ -1,0 +1,17 @@
+{
+	"$schema": "https://raw.githubusercontent.com/lukesampson/scoop/master/schema.json",
+	"version": "1.0.0",
+	"description": "Add 7-Zip features to the explorer context menu",
+	"url": "file://C:/Windows/System32/notepad.exe",
+	"depends": "main/7zip",
+	"installer": {
+		"script": [
+			"reg import \"$(appdir 7zip)\\current\\install-context.reg\""
+		]
+	},
+	"uninstaller": {
+		"script": [
+			"reg import \"$(appdir 7zip)\\current\\uninstall-context.reg\""
+		]
+	}
+}

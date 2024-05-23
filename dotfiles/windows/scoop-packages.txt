@@ -4,6 +4,7 @@ nodejs
 git
 git-filter-repo
 7zip
+local/7zip-feature-add-to-context-menu
 wireshark
 fiddler
 graphviz
