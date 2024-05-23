@@ -39,8 +39,16 @@ New-Folder '~\scoop\buckets\local'
 New-Symlink '~\scoop\buckets\local\bucket' "$PSScriptRoot\scoop-packages"
 
 # TODO: switch to using `winget`
-# install scoop packages
+# install scoop packages, and list installed packages which are not in the dotfiles
 $scoopPackagesToInstall = Load-ListFile "$PSScriptRoot\scoop-packages.txt"
+$scoopPackagesInstalled = scoop list 6> $null | Select-Object -ExpandProperty Name
+# TODO: ignore packages that scoop installs automatically or as dependencies (e.g. lessmsi/dark/innounp/vcredist2005)
+$scoopPackagesToInstallNormalized = $scoopPackagesToInstall | % { $_.Replace('local/', '') }
+$scoopPackagesInstalledSeparately = $scoopPackagesInstalled | Where-Object { $scoopPackagesToInstallNormalized -notcontains $_ }
+if ($scoopPackagesInstalledSeparately) {
+	Write-Host 'Scoop packages installed separately:'
+	$scoopPackagesInstalledSeparately | ForEach-Object { "`t$_" } | Out-Host
+}
 scoop install $scoopPackagesToInstall
 
 # make sure python3 takes precedence in path
