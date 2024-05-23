@@ -55,7 +55,11 @@ ida-free
 # Docker Toolbox (installs docker client and docker-machine)
 docker
 
+# ffdec requires an old Java
+oraclejre8
 # JDK + JRE
+# NOTE: it's important that the new java comes after the old one
+# because they both change PATH and overwrite each other
 openjdk
 
 ripgrep
