@@ -50,6 +50,11 @@ Invoke-WebRequest -UseBasicParsing 'https://chocolatey.org/install.ps1' | Invoke
 # install chocolatey packages
 choco install -y '.\chocolatey-packages.config'
 
+# make sure python3 takes precedence in path
+scoop reset python
+# make sure the latest java takes precedence in path
+scoop reset openjdk
+
 # TODO: use `rustup` installed by scoop to install `rustc` and `cargo`
 # TODO: `cargo install bat` - doesn't compile
 
