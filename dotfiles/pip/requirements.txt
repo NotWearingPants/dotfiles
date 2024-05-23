@@ -62,6 +62,9 @@ matplotlib
 # graphs
 networkx
 
+# math animations
+manim
+
 # parse PE files
 pefile
 # parse ELF files
