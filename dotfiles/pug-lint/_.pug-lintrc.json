@@ -1,0 +1,35 @@
+{
+	"$schema": "https://raw.githubusercontent.com/pugjs/pug-lint/master/schemas/pug-lintrc-schema.json",
+
+	"disallowLegacyMixinCall": true,
+	"disallowAttributeInterpolation": true,
+	"validateIndentation": "\t",
+	"disallowClassAttributeWithStaticValue": true,
+	"disallowIdAttributeWithStaticValue": true,
+	"requireClassLiteralsBeforeAttributes": true,
+	"requireIdLiteralsBeforeAttributes": true,
+	"requireClassLiteralsBeforeIdLiterals": true,
+	"disallowDuplicateAttributes": true,
+	"disallowHtmlText": true,
+	"disallowSpacesInsideAttributeBrackets": true,
+	"disallowTrailingSpaces": true,
+	"maximumLineLength": 200,
+	"requireLineFeedAtFileEnd": true,
+	"requireLowerCaseAttributes": true,
+	"requireLowerCaseTags": true,
+	"requireSpaceAfterCodeOperator": true,
+	"requireStrictEqualityOperators": true,
+	"validateAttributeQuoteMarks": "'",
+	"validateAttributeSeparator": {
+		"separator": ", ",
+		"multiLineSeparator": "\n"
+	},
+	"validateLineBreaks": "LF",
+	"disallowAttributeConcatenation": true,
+	"disallowStringConcatenation": true,
+	"validateTemplateString": true,
+	"validateSelfClosingTags": true,
+	"validateDivTags": true,
+	"requireSpecificAttributes": [{ "input": ["type"] }],
+	"validateExtensions": true
+}
