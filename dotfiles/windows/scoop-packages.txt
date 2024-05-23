@@ -90,11 +90,9 @@ qpdf
 
 # TODO: install source insight?
 
-# TODO: the android-sdk package appears to be a bit broken
-# find a way to make it work, or install the Android SDK, Android SDK Build Tools, and an emulator
-# (https://developer.android.com/studio/index.html#command-tools)
-# or give up and just install android-studio
-#android-sdk
+# TODO: install Android SDK, Android SDK Build Tools, an emulator
+#       (https://developer.android.com/studio/index.html#command-tools)
+#       or give up and just install `extras/android-studio`
 
 # pack and unpack Android APK files (doesn't decompile)
 apktool
