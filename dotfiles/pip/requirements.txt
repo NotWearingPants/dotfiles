@@ -119,8 +119,12 @@ jupyter
 # linter
 pylint
 
-# style linter
+# style linters
 black
+flake8
+
+# type linter
+mypy
 
 # refactoring utilities
 rope
