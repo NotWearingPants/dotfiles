@@ -3,6 +3,9 @@ ipython
 # IPython autoimport extension
 ipython-autoimport
 
+# for Jupyter notebooks in VSCode
+ipykernel
+
 # MOAR ITERTOOLS
 more-itertools
 
@@ -40,6 +43,11 @@ ImageHash
 # fast number arrays manipulation
 numpy
 
+# scientific libraries
+scipy
+scikit-learn
+sympy
+
 # computer vision library
 opencv-python
 
@@ -47,6 +55,12 @@ opencv-python
 pandas
 # parse XLSX files with pandas
 openpyxl
+
+# plots
+matplotlib
+
+# graphs
+networkx
 
 # parse PE files
 pefile
