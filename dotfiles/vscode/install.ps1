@@ -29,8 +29,8 @@ New-Symlink '~\.jsbeautifyrc' "$PSScriptRoot\_.jsbeautifyrc"
 
 $extensionsToInstall = Load-ListFile "$PSScriptRoot\extensions.txt"
 
-'Extensions installed separately:'
-Get-VSCodeExtensions | Where-Object { $extensionsToInstall -notcontains $_ } | ForEach-Object { "`t$_" }
+Write-Host 'Extensions installed separately:'
+Get-VSCodeExtensions | Where-Object { $extensionsToInstall -notcontains $_ } | ForEach-Object { "`t$_" } | Out-Host
 
 Install-VSCodeExtensions $extensionsToInstall
 
