@@ -6,6 +6,9 @@ ipython-autoimport
 # for Jupyter notebooks in VSCode
 ipykernel
 
+# python-based shell
+xonsh
+
 # MOAR ITERTOOLS
 more-itertools
 
